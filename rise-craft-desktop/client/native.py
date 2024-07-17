@@ -43,6 +43,7 @@ class RiseCraft:
     def isUpgradable(self):
         code = read_local(self.root_dir,False)["code"]
         remoteCode = fetch_version_info(self.api_url)["code"]
+        print(code,remoteCode)
         return code < remoteCode
     
     def performUpgrade(self):
@@ -54,7 +55,7 @@ class RiseCraft:
         print(src,dest)
         shutil.copy(src,dest)
         there = os.path.abspath(self.root_dir)
-        command = f"{dest} update \"{there}\""
+        command = [dest,"update",there]
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
         os._exit(0)
     
