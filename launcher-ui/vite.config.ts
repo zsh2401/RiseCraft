@@ -7,4 +7,9 @@ export default defineConfig({
     target: "es2018",
   },
   plugins: [react()],
+  css:{
+    modules:{
+      localsConvention:"camelCase"
+    }
+  }
 })

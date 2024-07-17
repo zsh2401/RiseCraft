@@ -21,11 +21,17 @@ class Bridge:
             raise e
     
 class RiseCraft:
-    def __init__(self,root_dir):
+    def __init__(self,root_dir,api_url):
         self.root_dir = root_dir
+        self.api_url = api_url
+    
     def getJavaPaths(self):
         # if os.
-        bin = f"{self.root_dir}/jre/{platform.system().lower()}/{platform.machine().lower()}/bin"
+        system = platform.system().lower()
+        machine = platform.machine().lower()
+        if system == "windows" and machine.endswith(64):
+            machine = "amd64"
+        bin = f"{self.root_dir}/jre/{system}/{machine}/bin"
         if platform.system().lower() != "windows":
             os.system(f"chmod +x {bin}/*")
 
@@ -35,9 +41,9 @@ class RiseCraft:
         return self.root_dir
     
     def isUpgradable(self):
-        code = read_local({self.root_dir},False)["code"]
-        remoteCode = fetch_version_info(self.root_dir)
-        return code <= remoteCode
+        code = read_local(self.root_dir,False)["code"]
+        remoteCode = fetch_version_info(self.api_url)["code"]
+        return code < remoteCode
     
     def performUpgrade(self):
         import tempfile
@@ -66,7 +72,7 @@ class RiseCraft:
         options["executablePath"] = options["java"]
         options["gameDirectory"] = options["gamePath"]
         minecraft_command = minecraft_launcher_lib.command.get_minecraft_command(options["versionName"], minecraft_directory, options)
-        proc = subprocess.Popen(minecraft_command, check=True)
+        proc = subprocess.Popen(minecraft_command)
 
 
 def set_status(status: str):

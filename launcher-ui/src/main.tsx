@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
 import { Bridge } from './Bridge.ts'
+import { App } from './App.tsx';
 export const bridge = new Bridge();
 (async ()=>{
   await bridge.registerOnWindow("RiseCraft")

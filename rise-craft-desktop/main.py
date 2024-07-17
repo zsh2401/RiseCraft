@@ -8,4 +8,5 @@ elif len(sys.argv) > 1 and sys.argv[1] == "server":
     server.support_server(os.path.dirname(os.path.abspath(sys.argv[0])),os.path.abspath(sys.argv[2]))
 else:
     import client.launcher
-    client.launcher.run("https://api.mc.zsh2401.top",os.path.dirname(os.path.abspath(sys.argv[0])))
+    # client.launcher.run("https://api.mc.zsh2401.top",os.path.dirname(os.path.abspath(sys.argv[0])))
+    client.launcher.run("https://api.mc.zsh2401.top",str(os.path.dirname(os.path.abspath(sys.argv[0]))))
