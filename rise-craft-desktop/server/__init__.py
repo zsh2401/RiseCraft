@@ -7,6 +7,17 @@ def support_server(dir:str):
     from flask import Flask
     app = Flask(__name__)
 
+    @app.route('/<path:path>')
+    def serve_static(path):
+        try:
+            return send_from_directory(os.path.join(os.getcwd(),dir,"web"), path)
+        except:
+            return send_from_directory(os.path.join(os.getcwd(),dir,"web"), "index.html")
+        
+    @app.route('/')
+    def index():
+        return send_from_directory(os.path.join(os.getcwd(),dir,"web"), "index.html")
+    
     @app.route('/api/version')
     def version():
         with open(os.path.join(dir,"version.json")) as f:
@@ -22,8 +33,6 @@ def support_server(dir:str):
         directory = os.path.join(os.getcwd(),dir, subpath)
         return send_from_directory(os.path.dirname(directory),os.path.basename(directory))
     
-    @app.route('/<path:path>')
-    def serve_static(path):
-        return send_from_directory(os.path.join(os.getcwd(),dir,"web"), path)
-
+ 
+    
     app.run(debug=True,port=9999)
