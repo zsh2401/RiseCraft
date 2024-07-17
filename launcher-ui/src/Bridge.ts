@@ -31,6 +31,6 @@ export class Bridge {
 
 
     async callNativePywebview<R>(ns: string, fn: string, ...args: unknown[]): Promise<R> {
-        return await pywebview.api.ns(ns, fn, args)
+        return await window.pywebview.api.ns(ns, fn, args)
     }
 }

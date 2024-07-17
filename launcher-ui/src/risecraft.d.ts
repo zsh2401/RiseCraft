@@ -1,6 +1,11 @@
 declare global {
     interface Window {
         RiseCraft: RiseCraftNativeAPI
+        pywebview:{
+            
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            api:any
+        }
     }
 }
 
