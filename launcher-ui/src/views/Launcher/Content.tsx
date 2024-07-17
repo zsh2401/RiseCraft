@@ -32,6 +32,7 @@ export function Content() {
         await window.RiseCraft.exitLauncher(0)
     }, [java,userName])
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const doUpdate = useCallback(() => {
         window.RiseCraft.performUpgrade()
     }, [])
