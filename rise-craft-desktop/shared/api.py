@@ -4,15 +4,15 @@ import os
 
 from shared.version_engine.version import Version
 def fetch_full_version(serverURL:str)->Version:
-    resp  = requests.get(serverURL + "/full-version")
+    resp  = requests.get(serverURL + "/api/full-version")
     return resp.json()
 
 def fetch_version_info(serverURL:str)->Version:
-    resp  = requests.get(serverURL + "/version")
+    resp  = requests.get(serverURL + "/api/version")
     return resp.json()
 
 def download(serverURL:str,path, dest):
-    resp = requests.get(serverURL + f"/download/{path}")
+    resp = requests.get(serverURL + f"/api/download/{path}")
     # 检查请求是否成功
     if resp.status_code == 200:
         # 确保目标文件夹存在
