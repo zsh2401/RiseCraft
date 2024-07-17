@@ -4,7 +4,7 @@ export class Bridge {
 
     async registerOnWindow(ns: string) {
         const proxy = new Proxy({}, {
-            get: (target: any, propName: string) => {
+            get: (_target: any, propName: string) => {
                 return async (...args: unknown[]) => {
                     return await this.callNativePywebview(ns, propName, ...args)
                 }
