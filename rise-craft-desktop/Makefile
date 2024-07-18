@@ -5,7 +5,7 @@ build-windows: RiseCraft.exe assets
 	-mv RiseCraft.exe RiseCraft/RiseCraft
 	
 generate:
-	python make-full-version.py RiseCraft
+	python main.py generate RiseCraft "https://risecraft.oss-rg-china-mainland.aliyuncs.com/RiseCraft/"
 
 assets:
 	@-mkdir RiseCraft
