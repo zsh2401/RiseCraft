@@ -14,7 +14,6 @@ def launch_mc(options):
         launch_options = {
             "username":options["userName"],
             "executablePath": options["java"],
-            "jvmArguments": options["jvmArguments"],
             "launcherName": "RiseCraft",
         }
         if "resolutionWidth" in options["resolutionWidth"]:
