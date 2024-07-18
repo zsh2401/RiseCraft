@@ -16,7 +16,7 @@ class MyWatcher(Watcher):
             r = event.message
         else:
             r = str(event)
-            
+        print(r)
         call_js_fn(self.webview,"onInstalling", None,r)
         
 class MyRunner(StreamRunner):
@@ -29,14 +29,14 @@ class MyRunner(StreamRunner):
             r = event.message
         else:
             r = event
+        print(r)
+        # call_js_fn(self.webview,"onLaunching", None,"启动中")
         call_js_fn(self.webview,"onLaunching", None,r)
             
 def launch_mc_2(options,webview):
     context = Context(Path(options["gamePath"]))
-    # context.wa
-    version = ForgeVersion("1.18.2-40.2.21", context=context)
+    version = ForgeVersion(options["versionName"], context=context)
     version.jvm_path = Path(options["java"])
-    # version.set
     version.set_auth_offline(options["userName"],None)
     version.fixes[Version.FIX_LWJGL] = "3.3.2"
     if "server" in options:
@@ -45,7 +45,9 @@ def launch_mc_2(options,webview):
             options["port"] if "port" in options else 25565
         )
     version.resolution = (options["resolutionWidth"],options["resolutionHeight"])
+    print("installing")
     env = version.install(watcher=MyWatcher(webview))
-    # env.
+    env.jvm_args.extend(options["jvmArguments"])
+    print("launching")
     env.run(MyRunner(webview))
     

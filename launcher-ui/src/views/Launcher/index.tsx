@@ -1,7 +1,7 @@
 
 import css from "./index.module.scss"
 
-import { Content } from './Content'
+import { Content } from './MainPane'
 import { useState } from "react"
 import { Updater } from "./Updater"
 
