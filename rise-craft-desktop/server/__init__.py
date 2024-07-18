@@ -3,7 +3,8 @@ from shared.version_engine.local import read_local
 
 import os
 import json
-def support_server(rootDir:str,webDir):
+def support_server(fullVersionFile:str,webDir):
+    fullVersion = json.load(fullVersionFile)
     from flask import Flask
     app = Flask(__name__)
 
@@ -21,18 +22,21 @@ def support_server(rootDir:str,webDir):
     
     @app.route('/api/version')
     def version():
-        with open(os.path.join(rootDir,"version.json")) as f:
-            return json.loads(f.read())
+        return {
+            "code":fullVersion["code"],
+            "name":fullVersion["name"]
+        }
     
     @app.route('/api/full-version')
     def full_version():
-        return read_local(rootDir,True,"https://risecraft.oss-rg-china-mainland.aliyuncs.com/RiseCraft/")
+        return fullVersion
+        # return read_local(rootDir,True,"https://risecraft.oss-rg-china-mainland.aliyuncs.com/RiseCraft/")
     
-    @app.route('/api/download/<path:subpath>')
-    def download_file(subpath):
-        print(os.getcwd())
-        directory = os.path.join(os.getcwd(),rootDir, subpath)
-        return send_from_directory(os.path.dirname(directory),os.path.basename(directory))
+    # @app.route('/api/download/<path:subpath>')
+    # def download_file(subpath):
+    #     print(os.getcwd())
+    #     directory = os.path.join(os.getcwd(),rootDir, subpath)
+    #     return send_from_directory(os.path.dirname(directory),os.path.basename(directory))
     
  
     
