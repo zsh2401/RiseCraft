@@ -22,7 +22,7 @@ export function Content() {
                 // alert("找不到Java或")
                 return
             }
-            alert("what?")
+            // alert("what?")
             await window.RiseCraft.launch({
                 java,
                 versionName: "1.18.2-40.2.21",
@@ -31,8 +31,8 @@ export function Content() {
                 baseVersionName: "1.18.2",
                 resolutionHeight: 600,
                 resolutionWidth: 800,
-                server: "ip.mc.qqq",
-                port: 123,
+                // server: "ip.mc.qqq",
+                // port: 123,
                 gamePath: appData + "/game/.minecraft"
             })
             setFailed(true)
