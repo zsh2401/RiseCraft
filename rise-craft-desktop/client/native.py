@@ -47,7 +47,7 @@ class RiseCraft:
     def getJavaPaths(self):
         system = platform.system().lower()
         machine = platform.machine().lower()
-        if system == "windows" and machine.endswith(64):
+        if system == "windows" and machine.endswith("64"):
             machine = "amd64"
         bin = f"{self.root_dir}/jre/{system}/{machine}/bin"
         if platform.system().lower() != "windows":
