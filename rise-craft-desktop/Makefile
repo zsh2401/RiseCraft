@@ -1,12 +1,24 @@
-build:
-	python -m nuitka --follow-imports main.py
+build-macos: RiseCraft.macos assets 
+	-mv RiseCraft.macos RiseCraft/RiseCraft
+
+build-windows: RiseCraft.exe assets 
+	-mv RiseCraft.exe RiseCraft/RiseCraft
+	
+generate:
+	python make-full-version.py RiseCraft
+
+assets:
 	@-mkdir RiseCraft
-	-mv main.bin RiseCraft/RiseCraft
-	-mv main.exe RiseCraft/RiseCraft.exe
 	-cp -rf jre RiseCraft/
 	-cp -rf game RiseCraft/
-	-cp -rf version.json RiseCraft/
-	# -cp RiseCraft/RiseCraft fake-local
+
+RiseCraft.macos:
+	python -m nuitka --follow-imports main.py
+	mv main.bin RiseCraft.macos
+
+RiseCraft.exe:
+	python -m nuitka main.py --onefile --windows-disable-console
+	mv main.exe RiseCraft.exe
 
 run: RiseCraft
 	./RiseCraft

@@ -65,7 +65,7 @@ class RiseCraft:
         return code < remoteCode
     
     def performUpgrade(self):
-        start_update_process()
+        start_update_process(self.root_dir)
     
     def exitLauncher(self,code):
         os._exit(code)
