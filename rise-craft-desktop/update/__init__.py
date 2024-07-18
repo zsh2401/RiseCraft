@@ -8,8 +8,7 @@ from tqdm import tqdm
 import subprocess
 import os
 import webview
-from client import Bridge, RiseCraft
-from client import call_js_fn_async,call_js_fn
+from client import call_js_fn
 import threading
 
 def on_closed():
