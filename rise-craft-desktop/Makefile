@@ -17,10 +17,10 @@ RiseCraft.macos:
 	mv main.bin RiseCraft.macos
 
 RiseCraft.exe:
-	python -m nuitka main.py --onefile --windows-disable-console --windows-icon-from-ico=assets/icon.png
+	python -m nuitka main.py --onefile --windows-disable-console --windows-icon-from-ico=assets/icon.ico
 	mv main.exe RiseCraft.exe
 win-debug:
-	pyinstaller main.py --onefile --icon=assets/icon.png
+	pyinstaller main.py --onefile --icon=assets/icon.ico
 	mv main.exe RiseCraft.exe
 
 run: RiseCraft
