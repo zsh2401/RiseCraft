@@ -23,10 +23,15 @@ export function Content() {
         }
         try{
             await window.RiseCraft.launch({
-                java,
+                java:"/Library/java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home/bin/java",
                 versionName: "1.18.2-forge-40.2.21",
                 userName,
+                jvmArguments:["-Xmx4096m"],
                 baseVersionName: "1.18.2",
+                resolutionHeight:600,
+                resolutionWidth:800,
+                server:"ip.mc.qqq",
+                port:123,
                 gamePath: appData + "/game/.minecraft"
             })
         }catch(err){
@@ -48,7 +53,7 @@ export function Content() {
      
     },[])
     return <div className='content'>
-        <h1>RiseCraft</h1>
+        <h1>RiseCraft X</h1>
         <h3>Have fun!</h3>
         <div className='pad'>
             <Input value={userName} onChange={e => setUserName(e.target.value)} placeholder='用户名' />
