@@ -11,8 +11,8 @@ def fetch_version_info(serverURL:str)->Version:
     resp  = requests.get(serverURL + "/api/version")
     return resp.json()
 
-def download(serverURL:str,path, dest):
-    resp = requests.get(serverURL + f"/api/download/{path}")
+def download(fullURL, dest):
+    resp = requests.get(fullURL)
     # 检查请求是否成功
     if resp.status_code == 200:
         # 确保目标文件夹存在

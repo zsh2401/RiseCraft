@@ -42,7 +42,7 @@ def do_update(target_dir:str,api:str,webview=None):
             step(len(differences),current / total, os.path.basename(d["path"]))
             if d["isFile"]:
                 _differences.set_description(f"{d["path"]}")
-                download(api,d["path"],os.path.join(target_dir,d["path"]))
+                download(d["url"],os.path.join(target_dir,d["path"]))
             else:
                 _differences.set_description("创建文件")
                 os.makedirs(os.path.join(target_dir,d["path"]),exist_ok=True)
