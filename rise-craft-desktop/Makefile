@@ -21,7 +21,7 @@ RiseCraft.exe:
 	mv main.exe RiseCraft.exe
 win-debug:
 	pyinstaller main.py --onefile --icon=assets/icon.ico
-	mv main.exe RiseCraft.exe
+	mv dist/main.exe RiseCraft.exe
 
 run: RiseCraft
 	./RiseCraft
