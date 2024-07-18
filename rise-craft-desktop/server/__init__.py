@@ -4,7 +4,9 @@ from shared.version_engine.local import read_local
 import os
 import json
 def support_server(fullVersionFile:str,webDir):
-    fullVersion = json.load(fullVersionFile)
+    with open(fullVersionFile,"r") as f:
+        fullVersion = json.load(f)
+        
     from flask import Flask
     app = Flask(__name__)
 
