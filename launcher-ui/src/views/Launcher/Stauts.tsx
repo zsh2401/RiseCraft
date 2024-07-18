@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from "react"
 
 export function Status(props: {
     successLaunched: () => void
-    onLaunchFailed: () => void
 }) {
     const [raw, setRaw] = useState<any>()
     const [stage, setStage] = useState("")
