@@ -41,4 +41,5 @@ export interface RiseCraftLaunchOptions {
     gamePath: string
     server?: string
     port?: number
+    jvmArguments?:string[]
 }
