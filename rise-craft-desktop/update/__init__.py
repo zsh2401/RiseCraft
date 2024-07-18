@@ -55,4 +55,5 @@ def do_update(target_dir:str,api:str,webview=None):
     step(0,1,"更新完成")
     
     launch_game(target_dir)
+    os._exit(0)
 
