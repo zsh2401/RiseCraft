@@ -3,7 +3,7 @@ import json
 import hashlib
 
 from shared.version_engine.version import FileInfo, Version
-def read_local(root_dir,fileList=True)->Version:
+def read_local(root_dir,fileList=True,download_prefix:str=None)->Version:
     print(os.path.join(root_dir,"version.json"))
     if os.path.exists(os.path.join(root_dir,"version.json")) == False:
         return {
@@ -16,10 +16,10 @@ def read_local(root_dir,fileList=True)->Version:
         return {
             "code":versionJson["code"],
             "name": versionJson["name"],
-            "fileList":list_files_and_folders(root_dir) if fileList else []
+            "fileList":list_files_and_folders(root_dir,download_prefix) if fileList else []
         }
     
-def list_files_and_folders(root_dir)->list[FileInfo]:
+def list_files_and_folders(root_dir,download_prefix:str=None)->list[FileInfo]:
     all_files_and_folders = []
     for dirpath, dirnames, filenames in os.walk(root_dir):
         for dirname in dirnames:
@@ -34,6 +34,9 @@ def list_files_and_folders(root_dir)->list[FileInfo]:
                       "md5": calculate_md5(path),
                       "path":clean_path(root_dir,os.path.join(dirpath, filename)),
                       "size":os.path.getsize(path)}
+            if download_prefix is not None:
+                entity["url"] = download_prefix + entity["path"]
+                
             all_files_and_folders.append(entity)
     return all_files_and_folders
 

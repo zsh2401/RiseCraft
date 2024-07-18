@@ -26,7 +26,7 @@ def support_server(rootDir:str,webDir):
     
     @app.route('/api/full-version')
     def full_version():
-        return read_local(rootDir)
+        return read_local(rootDir,True,"https://risecraft.oss-rg-china-mainland.aliyuncs.com/RiseCraft/")
     
     @app.route('/api/download/<path:subpath>')
     def download_file(subpath):
