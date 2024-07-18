@@ -56,6 +56,7 @@ export function Content() {
     return <div className='content'>
         <h1>RiseCraft X</h1>
         <h3>Have fun!</h3>
+        <a target="_blank" href='https://baidu.com'>WOw</a>
         <div className='pad'>
             <Input value={userName} onChange={e => setUserName(e.target.value)} placeholder='用户名' />
             <br /><br />
