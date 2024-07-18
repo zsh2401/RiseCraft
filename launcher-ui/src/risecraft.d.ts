@@ -37,9 +37,12 @@ export interface RiseCraftLaunchOptions {
     versionName: string
     baseVersionName: string
     userName: string
+    fix?:boolean
     password?: string
     gamePath: string
     server?: string
     port?: number
+    resolutionWidth?:number
+    resolutionHeight?:number
     jvmArguments?:string[]
 }
