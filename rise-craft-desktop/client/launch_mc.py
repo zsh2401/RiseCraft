@@ -16,13 +16,13 @@ def launch_mc(options):
             "executablePath": options["java"],
             "launcherName": "RiseCraft",
         }
-        if "resolutionWidth" in options["resolutionWidth"]:
+        if "resolutionWidth" in options:
             launch_options["resolutionWidth"] = options["resolutionWidth"]
             
-        if "resolutionHeight" in options["resolutionHeight"]:
+        if "resolutionHeight" in options:
             launch_options["resolutionHeight"] = options["resolutionHeight"]
             
-        if "jvmArguments" in options["jvmArguments"]:
+        if "jvmArguments" in options:
             launch_options["jvmArguments"] = options["jvmArguments"]
             
         if "server" in options:
