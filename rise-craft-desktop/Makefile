@@ -1,5 +1,5 @@
 build:
-	python -m nuitka --one-file --follow-imports main.py
+	python -m nuitka --onefile --follow-imports main.py
 	@-mkdir RiseCraft
 	-mv main.bin RiseCraft/RiseCraft
 	-mv main.exe RiseCraft/RiseCraft.exe
