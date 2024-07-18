@@ -38,7 +38,7 @@
     </module_usages>
   </module>
   <module name="OpenSSL.SSL" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/OpenSSL/SSL.py" distribution="pyOpenSSL">
-    <optimization-time pass="1" time="0.46" />
+    <optimization-time pass="1" time="0.43" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="socket" finding="absolute" line="2" />
@@ -138,7 +138,7 @@
     </module_usages>
   </module>
   <module name="PyObjCTools.AppHelper" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/PyObjCTools/AppHelper.py" distribution="pyobjc-core,pyobjc-framework-Cocoa">
-    <optimization-time pass="1" time="0.18" />
+    <optimization-time pass="1" time="0.10" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="21" />
       <module_usage name="sys" finding="absolute" line="22" />
@@ -186,7 +186,7 @@
     </module_usages>
   </module>
   <module name="Security" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/Security/__init__.py" distribution="pyobjc-framework-Security">
-    <optimization-time pass="1" time="0.05" />
+    <optimization-time pass="1" time="0.04" />
     <distribution-usages>
       <distribution-usage name="pyobjc-framework-Cocoa" />
       <distribution-usage name="pyobjc-core" />
@@ -266,7 +266,7 @@
     <module_usages />
   </module>
   <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="main.py">
-    <optimization-time pass="1" time="0.05" />
+    <optimization-time pass="1" time="0.04" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" />
       <module_usage name="os" finding="absolute" line="2" />
@@ -592,7 +592,7 @@
     <module_usages />
   </module>
   <module name="_collections_abc" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/_collections_abc.py">
-    <optimization-time pass="1" time="0.63" />
+    <optimization-time pass="1" time="0.60" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="35" />
       <module_usage name="sys" finding="absolute" line="36" />
@@ -670,7 +670,7 @@
     </module_usages>
   </module>
   <module name="_pydatetime" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/_pydatetime.py">
-    <optimization-time pass="1" time="0.44" />
+    <optimization-time pass="1" time="0.71" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="11" />
       <module_usage name="math" finding="absolute" line="12" />
@@ -682,7 +682,7 @@
     </module_usages>
   </module>
   <module name="_pydecimal" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/_pydecimal.py">
-    <optimization-time pass="1" time="0.99" />
+    <optimization-time pass="1" time="0.94" />
     <module_usages>
       <module_usage name="math" finding="absolute" line="59" />
       <module_usage name="numbers" finding="absolute" line="60" />
@@ -732,7 +732,7 @@
     <module_usages />
   </module>
   <module name="_strptime" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/_strptime.py">
-    <optimization-time pass="1" time="0.16" />
+    <optimization-time pass="1" time="0.17" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="13" />
       <module_usage name="locale" finding="absolute" line="14" />
@@ -752,7 +752,7 @@
     <module_usages />
   </module>
   <module name="_threading_local" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/_threading_local.py">
-    <optimization-time pass="1" time="0.02" />
+    <optimization-time pass="1" time="0.01" />
     <module_usages>
       <module_usage name="weakref" finding="absolute" line="131" />
       <module_usage name="contextlib" finding="absolute" line="132" />
@@ -764,7 +764,7 @@
     <module_usages />
   </module>
   <module name="_weakrefset" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/_weakrefset.py">
-    <optimization-time pass="1" time="0.04" />
+    <optimization-time pass="1" time="0.03" />
     <module_usages>
       <module_usage name="_weakref" finding="absolute" line="5" />
       <module_usage name="types" finding="absolute" line="6" />
@@ -778,7 +778,7 @@
     </module_usages>
   </module>
   <module name="argparse" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/argparse.py">
-    <optimization-time pass="1" time="0.96" />
+    <optimization-time pass="1" time="0.89" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="88" />
       <module_usage name="re" finding="absolute" line="89" />
@@ -804,7 +804,7 @@
     <module_usages />
   </module>
   <module name="ast" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/ast.py">
-    <optimization-time pass="1" time="0.71" />
+    <optimization-time pass="1" time="0.46" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="27" />
       <module_usage name="re" finding="absolute" line="28" />
@@ -826,7 +826,7 @@
     </module_usages>
   </module>
   <module name="base64" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/base64.py">
-    <optimization-time pass="1" time="0.10" />
+    <optimization-time pass="1" time="0.09" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="9" />
       <module_usage name="struct" finding="absolute" line="10" />
@@ -864,7 +864,7 @@
     <module_usages />
   </module>
   <module name="bdb" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/bdb.py">
-    <optimization-time pass="1" time="0.09" />
+    <optimization-time pass="1" time="0.08" />
     <module_usages>
       <module_usage name="fnmatch" finding="absolute" line="3" />
       <module_usage name="sys" finding="absolute" line="4" />
@@ -909,7 +909,7 @@
     </module_usages>
   </module>
   <module name="calendar" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/calendar.py">
-    <optimization-time pass="1" time="0.30" />
+    <optimization-time pass="1" time="0.31" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="8" />
       <module_usage name="datetime" finding="absolute" line="9" />
@@ -920,7 +920,7 @@
     </module_usages>
   </module>
   <module name="certifi" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/certifi/__init__.py" distribution="certifi">
-    <optimization-time pass="1" time="0.01" />
+    <optimization-time pass="1" time="0.00" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="certifi.core" finding="relative" line="1" />
@@ -960,7 +960,7 @@
     </module_usages>
   </module>
   <module name="chardet.chardistribution" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/chardet/chardistribution.py" distribution="chardet">
-    <optimization-time pass="1" time="0.75" />
+    <optimization-time pass="1" time="0.11" />
     <module_usages>
       <module_usage name="chardet.euctwfreq" finding="relative" line="28" />
       <module_usage name="chardet.euckrfreq" finding="relative" line="30" />
@@ -1020,7 +1020,7 @@
     </module_usages>
   </module>
   <module name="chardet.eucjpprober" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/chardet/eucjpprober.py" distribution="chardet">
-    <optimization-time pass="1" time="0.04" />
+    <optimization-time pass="1" time="0.03" />
     <module_usages>
       <module_usage name="chardet.enums" finding="relative" line="28" />
       <module_usage name="chardet.mbcharsetprober" finding="relative" line="29" />
@@ -1164,7 +1164,7 @@
     </module_usages>
   </module>
   <module name="chardet.sbcsgroupprober" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/chardet/sbcsgroupprober.py" distribution="chardet">
-    <optimization-time pass="1" time="0.18" />
+    <optimization-time pass="1" time="0.17" />
     <module_usages>
       <module_usage name="chardet.charsetgroupprober" finding="relative" line="29" />
       <module_usage name="chardet.hebrewprober" finding="relative" line="30" />
@@ -1189,7 +1189,7 @@
     </module_usages>
   </module>
   <module name="chardet.universaldetector" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/chardet/universaldetector.py" distribution="chardet">
-    <optimization-time pass="1" time="0.05" />
+    <optimization-time pass="1" time="0.04" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="39" />
       <module_usage name="logging" finding="absolute" line="40" />
@@ -1228,7 +1228,7 @@
     </module_usages>
   </module>
   <module name="charset_normalizer.api" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/charset_normalizer/api.py" distribution="charset-normalizer">
-    <optimization-time pass="1" time="0.14" />
+    <optimization-time pass="1" time="0.13" />
     <module_usages>
       <module_usage name="posixpath" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="2" />
@@ -1297,7 +1297,7 @@
     </module_usages>
   </module>
   <module name="charset_normalizer.models" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/charset_normalizer/models.py" distribution="charset-normalizer">
-    <optimization-time pass="1" time="0.09" />
+    <optimization-time pass="1" time="0.08" />
     <module_usages>
       <module_usage name="warnings" finding="absolute" line="1" />
       <module_usage name="encodings.aliases" finding="absolute" line="2" />
@@ -1340,17 +1340,17 @@
     <module_usages />
   </module>
   <module name="client.launcher" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${cwd}/client/launcher.py">
-    <optimization-time pass="1" time="0.03" />
+    <optimization-time pass="1" time="0.02" />
     <distribution-usages>
       <distribution-usage name="pywebview" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="webview" finding="absolute" line="2" />
-      <module_usage name="client.native" finding="relative" line="3" />
+      <module_usage name="webview" finding="absolute" line="1" />
+      <module_usage name="client.native" finding="relative" line="2" />
     </module_usages>
   </module>
   <module name="client.native" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${cwd}/client/native.py">
-    <optimization-time pass="1" time="0.26" />
+    <optimization-time pass="1" time="0.24" />
     <distribution-usages>
       <distribution-usage name="minecraft-launcher-lib" />
     </distribution-usages>
@@ -1374,7 +1374,7 @@
     </module_usages>
   </module>
   <module name="cmd" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/cmd.py">
-    <optimization-time pass="1" time="0.07" />
+    <optimization-time pass="1" time="0.06" />
     <module_usages>
       <module_usage name="string" finding="absolute" line="45" />
       <module_usage name="sys" finding="absolute" line="45" />
@@ -1385,7 +1385,7 @@
     </module_usages>
   </module>
   <module name="code" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/code.py">
-    <optimization-time pass="1" time="0.04" />
+    <optimization-time pass="1" time="0.03" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="8" />
       <module_usage name="traceback" finding="absolute" line="9" />
@@ -1395,7 +1395,7 @@
     </module_usages>
   </module>
   <module name="codecs" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/codecs.py">
-    <optimization-time pass="1" time="0.10" />
+    <optimization-time pass="1" time="0.20" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="10" />
       <module_usage name="sys" finding="absolute" line="11" />
@@ -1410,7 +1410,7 @@
     </module_usages>
   </module>
   <module name="collections" kind="CompiledPythonPackage" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/collections/__init__.py">
-    <optimization-time pass="1" time="0.38" />
+    <optimization-time pass="1" time="0.37" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="_collections_abc" finding="absolute" line="29" />
@@ -1442,7 +1442,7 @@
     </module_usages>
   </module>
   <module name="contextlib" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/contextlib.py">
-    <optimization-time pass="1" time="0.30" />
+    <optimization-time pass="1" time="0.18" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="2" />
       <module_usage name="os" finding="absolute" line="3" />
@@ -1461,7 +1461,7 @@
     </module_usages>
   </module>
   <module name="copy" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/copy.py">
-    <optimization-time pass="1" time="0.05" />
+    <optimization-time pass="1" time="0.04" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="51" />
       <module_usage name="weakref" finding="absolute" line="52" />
@@ -1476,7 +1476,7 @@
     </module_usages>
   </module>
   <module name="cryptography" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/__init__.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.02" />
+    <optimization-time pass="1" time="0.01" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="__future__" finding="absolute" line="5" />
@@ -1505,7 +1505,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat._oid" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/_oid.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.06" />
+    <optimization-time pass="1" time="0.05" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="cryptography.hazmat.bindings._rust" finding="absolute" line="7" />
@@ -1542,7 +1542,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat.backends.openssl.backend" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/backends/openssl/backend.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.20" />
+    <optimization-time pass="1" time="0.17" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="collections" finding="absolute" line="7" />
@@ -1577,7 +1577,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat.backends.openssl.ciphers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/backends/openssl/ciphers.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.53" />
+    <optimization-time pass="1" time="0.03" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="typing" finding="absolute" line="7" />
@@ -1648,7 +1648,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat.primitives._serialization" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/primitives/_serialization.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.10" />
+    <optimization-time pass="1" time="0.04" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="abc" finding="absolute" line="7" />
@@ -1664,7 +1664,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat.primitives.asymmetric.dh" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/primitives/asymmetric/dh.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.02" />
+    <optimization-time pass="1" time="0.01" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="abc" finding="absolute" line="7" />
@@ -1688,7 +1688,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat.primitives.asymmetric.ec" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/primitives/asymmetric/ec.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.26" />
+    <optimization-time pass="1" time="0.22" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="abc" finding="absolute" line="7" />
@@ -1802,7 +1802,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat.primitives.asymmetric.x448" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/primitives/asymmetric/x448.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.02" />
+    <optimization-time pass="1" time="0.01" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="abc" finding="absolute" line="7" />
@@ -1884,7 +1884,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat.primitives.hashes" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/primitives/hashes.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.11" />
+    <optimization-time pass="1" time="0.10" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="abc" finding="absolute" line="7" />
@@ -1930,7 +1930,7 @@
     </module_usages>
   </module>
   <module name="cryptography.hazmat.primitives.serialization.ssh" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/hazmat/primitives/serialization/ssh.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.39" />
+    <optimization-time pass="1" time="0.38" />
     <distribution-usages>
       <distribution-usage name="bcrypt" />
     </distribution-usages>
@@ -2001,7 +2001,7 @@
     </module_usages>
   </module>
   <module name="cryptography.x509.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/x509/base.py" distribution="cryptography">
-    <optimization-time pass="1" time="0.25" />
+    <optimization-time pass="1" time="0.24" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="abc" finding="absolute" line="7" />
@@ -2043,7 +2043,7 @@
     </module_usages>
   </module>
   <module name="cryptography.x509.extensions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cryptography/x509/extensions.py" distribution="cryptography">
-    <optimization-time pass="1" time="1.61" />
+    <optimization-time pass="1" time="1.91" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="abc" finding="absolute" line="7" />
@@ -2111,7 +2111,7 @@
     </module_usages>
   </module>
   <module name="csv" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/csv.py">
-    <optimization-time pass="1" time="0.18" />
+    <optimization-time pass="1" time="0.17" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="6" />
       <module_usage name="types" finding="absolute" line="7" />
@@ -2121,7 +2121,7 @@
     </module_usages>
   </module>
   <module name="dataclasses" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/dataclasses.py">
-    <optimization-time pass="1" time="0.33" />
+    <optimization-time pass="1" time="0.21" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="2" />
@@ -2158,7 +2158,7 @@
     </module_usages>
   </module>
   <module name="dis" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/dis.py">
-    <optimization-time pass="1" time="0.71" />
+    <optimization-time pass="1" time="0.75" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" />
       <module_usage name="types" finding="absolute" line="4" />
@@ -2194,7 +2194,7 @@
     </module_usages>
   </module>
   <module name="email._header_value_parser" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/_header_value_parser.py">
-    <optimization-time pass="1" time="2.27" />
+    <optimization-time pass="1" time="2.03" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="70" />
       <module_usage name="sys" finding="absolute" line="71" />
@@ -2210,14 +2210,14 @@
     </module_usages>
   </module>
   <module name="email._parseaddr" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/_parseaddr.py">
-    <optimization-time pass="1" time="0.12" />
+    <optimization-time pass="1" time="0.33" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="16" />
       <module_usage name="calendar" finding="absolute" line="16" />
     </module_usages>
   </module>
   <module name="email._policybase" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/_policybase.py">
-    <optimization-time pass="1" time="0.07" />
+    <optimization-time pass="1" time="0.06" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="6" />
       <module_usage name="email" finding="absolute" line="7" />
@@ -2264,7 +2264,7 @@
     </module_usages>
   </module>
   <module name="email.errors" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/errors.py">
-    <optimization-time pass="1" time="0.41" />
+    <optimization-time pass="1" time="0.21" />
     <module_usages />
   </module>
   <module name="email.feedparser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/feedparser.py">
@@ -2281,7 +2281,7 @@
     </module_usages>
   </module>
   <module name="email.generator" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/generator.py">
-    <optimization-time pass="1" time="0.08" />
+    <optimization-time pass="1" time="0.22" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="9" />
       <module_usage name="sys" finding="absolute" line="10" />
@@ -2293,7 +2293,7 @@
     </module_usages>
   </module>
   <module name="email.header" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/header.py">
-    <optimization-time pass="1" time="0.12" />
+    <optimization-time pass="1" time="0.11" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="13" />
       <module_usage name="binascii" finding="absolute" line="14" />
@@ -2305,7 +2305,7 @@
     </module_usages>
   </module>
   <module name="email.headerregistry" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/headerregistry.py">
-    <optimization-time pass="1" time="0.28" />
+    <optimization-time pass="1" time="0.27" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="6" />
       <module_usage name="email" finding="absolute" line="8" />
@@ -2325,7 +2325,7 @@
     </module_usages>
   </module>
   <module name="email.message" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/message.py">
-    <optimization-time pass="1" time="0.35" />
+    <optimization-time pass="1" time="0.22" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="9" />
       <module_usage name="re" finding="absolute" line="10" />
@@ -2354,7 +2354,7 @@
     </module_usages>
   </module>
   <module name="email.policy" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/policy.py">
-    <optimization-time pass="1" time="0.05" />
+    <optimization-time pass="1" time="0.13" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="5" />
       <module_usage name="sys" finding="absolute" line="6" />
@@ -2366,7 +2366,7 @@
     </module_usages>
   </module>
   <module name="email.quoprimime" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/quoprimime.py">
-    <optimization-time pass="1" time="0.04" />
+    <optimization-time pass="1" time="0.16" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="42" />
       <module_usage name="string" finding="absolute" line="44" />
@@ -2374,7 +2374,7 @@
   </module>
   <module name="email.utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/email/utils.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_socket&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="0.15" />
+    <optimization-time pass="1" time="0.10" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" />
       <module_usage name="re" finding="absolute" line="26" />
@@ -2392,7 +2392,7 @@
     </module_usages>
   </module>
   <module name="encodings" kind="CompiledPythonPackage" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/encodings/__init__.py">
-    <optimization-time pass="1" time="0.03" />
+    <optimization-time pass="1" time="0.02" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="codecs" finding="absolute" line="31" />
@@ -2416,7 +2416,7 @@
   </module>
   <module name="enum" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/enum.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="false" />
-    <optimization-time pass="1" time="0.91" />
+    <optimization-time pass="1" time="0.88" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" />
       <module_usage name="builtins" finding="absolute" line="2" />
@@ -2459,7 +2459,7 @@
     </module_usages>
   </module>
   <module name="ftplib" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/ftplib.py">
-    <optimization-time pass="1" time="0.14" />
+    <optimization-time pass="1" time="0.13" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="39" />
       <module_usage name="socket" finding="absolute" line="40" />
@@ -2521,7 +2521,7 @@
     </module_usages>
   </module>
   <module name="gettext" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/gettext.py">
-    <optimization-time pass="1" time="0.15" />
+    <optimization-time pass="1" time="0.14" />
     <module_usages>
       <module_usage name="operator" finding="absolute" line="49" />
       <module_usage name="os" finding="absolute" line="50" />
@@ -2538,7 +2538,7 @@
     </module_usages>
   </module>
   <module name="glob" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/glob.py">
-    <optimization-time pass="1" time="0.05" />
+    <optimization-time pass="1" time="0.04" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="3" />
       <module_usage name="os" finding="absolute" line="4" />
@@ -2636,7 +2636,7 @@
     </module_usages>
   </module>
   <module name="http.cookiejar" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/http/cookiejar.py">
-    <optimization-time pass="1" time="0.47" />
+    <optimization-time pass="1" time="0.50" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="31" />
       <module_usage name="copy" finding="absolute" line="32" />
@@ -2665,7 +2665,7 @@
     </module_usages>
   </module>
   <module name="idna" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/idna/__init__.py" distribution="idna">
-    <optimization-time pass="1" time="0.06" />
+    <optimization-time pass="1" time="0.02" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="idna.package_data" finding="relative" line="1" />
@@ -2674,7 +2674,7 @@
     </module_usages>
   </module>
   <module name="idna.core" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/idna/core.py" distribution="idna">
-    <optimization-time pass="1" time="0.75" />
+    <optimization-time pass="1" time="0.24" />
     <module_usages>
       <module_usage name="idna" finding="absolute" line="1" />
       <module_usage name="idna.idnadata" finding="relative" line="1" />
@@ -2691,7 +2691,7 @@
     <module_usages />
   </module>
   <module name="idna.intranges" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/idna/intranges.py" distribution="idna">
-    <optimization-time pass="1" time="0.02" />
+    <optimization-time pass="1" time="0.01" />
     <module_usages>
       <module_usage name="bisect" finding="absolute" line="8" />
       <module_usage name="typing" finding="absolute" line="9" />
@@ -2728,13 +2728,13 @@
     </module_usages>
   </module>
   <module name="importlib._bootstrap" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/importlib/_bootstrap.py">
-    <optimization-time pass="1" time="0.18" />
+    <optimization-time pass="1" time="0.19" />
     <module_usages>
       <module_usage name="_frozen_importlib_external" finding="absolute" line="1549" />
     </module_usages>
   </module>
   <module name="importlib._bootstrap_external" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/importlib/_bootstrap_external.py">
-    <optimization-time pass="1" time="0.36" />
+    <optimization-time pass="1" time="0.26" />
     <module_usages>
       <module_usage name="_imp" finding="absolute" line="26" />
       <module_usage name="_io" finding="absolute" line="27" />
@@ -2782,7 +2782,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata" kind="CompiledPythonPackage" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/importlib/metadata/__init__.py">
-    <optimization-time pass="1" time="0.32" />
+    <optimization-time pass="1" time="0.43" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="re" finding="absolute" line="2" />
@@ -2970,7 +2970,7 @@
     </module_usages>
   </module>
   <module name="inspect" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/inspect.py">
-    <optimization-time pass="1" time="0.94" />
+    <optimization-time pass="1" time="0.97" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="144" />
       <module_usage name="ast" finding="absolute" line="145" />
@@ -3012,14 +3012,14 @@
     </module_usages>
   </module>
   <module name="ipaddress" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/ipaddress.py">
-    <optimization-time pass="1" time="0.62" />
+    <optimization-time pass="1" time="0.39" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="14" />
       <module_usage name="re" finding="absolute" line="641" />
     </module_usages>
   </module>
   <module name="json" kind="CompiledPythonPackage" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/json/__init__.py">
-    <optimization-time pass="1" time="0.11" />
+    <optimization-time pass="1" time="0.03" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="json.decoder" finding="absolute" line="106" />
@@ -3072,7 +3072,7 @@
     </module_usages>
   </module>
   <module name="locale" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/locale.py">
-    <optimization-time pass="1" time="0.10" />
+    <optimization-time pass="1" time="0.09" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="13" />
       <module_usage name="encodings" finding="absolute" line="14" />
@@ -3092,7 +3092,7 @@
     </module_usages>
   </module>
   <module name="logging" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/logging/__init__.py">
-    <optimization-time pass="1" time="0.57" />
+    <optimization-time pass="1" time="0.63" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="26" />
@@ -3156,7 +3156,7 @@
     </module_usages>
   </module>
   <module name="minecraft_launcher_lib" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/minecraft_launcher_lib/__init__.py" distribution="minecraft-launcher-lib">
-    <optimization-time pass="1" time="0.11" />
+    <optimization-time pass="1" time="0.10" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="minecraft_launcher_lib" finding="absolute" line="1" />
@@ -3231,7 +3231,7 @@
     </module_usages>
   </module>
   <module name="minecraft_launcher_lib._internal_types.install_types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/minecraft_launcher_lib/_internal_types/install_types.py" distribution="minecraft-launcher-lib">
-    <optimization-time pass="1" time="0.01" />
+    <optimization-time pass="1" time="0.00" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="1" />
     </module_usages>
@@ -3261,7 +3261,7 @@
     </module_usages>
   </module>
   <module name="minecraft_launcher_lib.command" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/minecraft_launcher_lib/command.py" distribution="minecraft-launcher-lib">
-    <optimization-time pass="1" time="0.04" />
+    <optimization-time pass="1" time="0.03" />
     <module_usages>
       <module_usage name="minecraft_launcher_lib._helper" finding="relative" line="2" />
       <module_usage name="minecraft_launcher_lib._internal_types.shared_types" finding="relative" line="3" />
@@ -3337,7 +3337,7 @@
     </module_usages>
   </module>
   <module name="minecraft_launcher_lib.install" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/minecraft_launcher_lib/install.py" distribution="minecraft-launcher-lib">
-    <optimization-time pass="1" time="0.07" />
+    <optimization-time pass="1" time="0.06" />
     <distribution-usages>
       <distribution-usage name="requests" />
     </distribution-usages>
@@ -3503,7 +3503,7 @@
     </module_usages>
   </module>
   <module name="minecraft_launcher_lib.types" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/minecraft_launcher_lib/types.py" distribution="minecraft-launcher-lib">
-    <optimization-time pass="1" time="0.16" />
+    <optimization-time pass="1" time="0.14" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="6" />
       <module_usage name="datetime" finding="absolute" line="7" />
@@ -3575,7 +3575,7 @@
     </module_usages>
   </module>
   <module name="ntpath" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/ntpath.py">
-    <optimization-time pass="1" time="0.19" />
+    <optimization-time pass="1" time="0.18" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="20" />
       <module_usage name="sys" finding="absolute" line="21" />
@@ -3597,14 +3597,14 @@
     </module_usages>
   </module>
   <module name="numbers" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/numbers.py">
-    <optimization-time pass="1" time="0.04" />
+    <optimization-time pass="1" time="0.24" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="33" />
     </module_usages>
   </module>
   <module name="objc" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/objc/__init__.py" distribution="pyobjc-core">
     <plugin-influence name="options-nanny" influence="condition-used" condition="version(&quot;pyobjc&quot;) &lt; (9,)" tags_used="version" result="false" />
-    <optimization-time pass="1" time="0.28" />
+    <optimization-time pass="1" time="0.32" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="objc" finding="absolute" line="7" />
@@ -3654,7 +3654,7 @@
     </module_usages>
   </module>
   <module name="objc._bridgesupport" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/objc/_bridgesupport.py" distribution="pyobjc-core">
-    <optimization-time pass="1" time="1.04" />
+    <optimization-time pass="1" time="0.21" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="9" />
       <module_usage name="re" finding="absolute" line="10" />
@@ -3828,7 +3828,7 @@
     </module_usages>
   </module>
   <module name="objc._lazyimport" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/objc/_lazyimport.py" distribution="pyobjc-core">
-    <optimization-time pass="1" time="0.08" />
+    <optimization-time pass="1" time="0.07" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="10" />
       <module_usage name="struct" finding="absolute" line="11" />
@@ -3866,7 +3866,7 @@
     <module_usages />
   </module>
   <module name="objc._properties" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/objc/_properties.py" distribution="pyobjc-core">
-    <optimization-time pass="1" time="0.14" />
+    <optimization-time pass="1" time="0.72" />
     <module_usages>
       <module_usage name="copy" finding="absolute" line="9" />
       <module_usage name="objc" finding="absolute" line="11" />
@@ -3889,7 +3889,7 @@
     </module_usages>
   </module>
   <module name="objc._pycoder" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/objc/_pycoder.py" distribution="pyobjc-core">
-    <optimization-time pass="1" time="0.07" />
+    <optimization-time pass="1" time="0.06" />
     <module_usages>
       <module_usage name="copy" finding="absolute" line="13" />
       <module_usage name="copyreg" finding="absolute" line="14" />
@@ -3916,7 +3916,7 @@
     </module_usages>
   </module>
   <module name="objc._transform" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/objc/_transform.py" distribution="pyobjc-core">
-    <optimization-time pass="1" time="0.20" />
+    <optimization-time pass="1" time="0.18" />
     <module_usages>
       <module_usage name="objc" finding="absolute" line="10" />
       <module_usage name="types" finding="absolute" line="11" />
@@ -3947,7 +3947,7 @@
     </module_usages>
   </module>
   <module name="pathlib" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/pathlib.py">
-    <optimization-time pass="1" time="0.42" />
+    <optimization-time pass="1" time="0.36" />
     <module_usages>
       <module_usage name="fnmatch" finding="absolute" line="8" />
       <module_usage name="functools" finding="absolute" line="9" />
@@ -3968,7 +3968,7 @@
     </module_usages>
   </module>
   <module name="pdb" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/pdb.py">
-    <optimization-time pass="1" time="0.47" />
+    <optimization-time pass="1" time="0.43" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="70" />
       <module_usage name="io" finding="absolute" line="71" />
@@ -4007,7 +4007,7 @@
     </module_usages>
   </module>
   <module name="pickle" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/pickle.py">
-    <optimization-time pass="1" time="0.57" />
+    <optimization-time pass="1" time="0.56" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="26" />
       <module_usage name="copyreg" finding="absolute" line="27" />
@@ -4030,7 +4030,7 @@
     </module_usages>
   </module>
   <module name="pkgutil" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/pkgutil.py">
-    <optimization-time pass="1" time="0.09" />
+    <optimization-time pass="1" time="0.08" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="3" />
       <module_usage name="collections.namedtuple" finding="not-found" line="3" />
@@ -4054,7 +4054,7 @@
   </module>
   <module name="platform" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/platform.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not macos" tags_used="macos" result="false" />
-    <optimization-time pass="1" time="0.23" />
+    <optimization-time pass="1" time="0.22" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="116" />
       <module_usage name="os" finding="absolute" line="117" />
@@ -4083,7 +4083,7 @@
     </module_usages>
   </module>
   <module name="plistlib" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/plistlib.py">
-    <optimization-time pass="1" time="0.18" />
+    <optimization-time pass="1" time="0.17" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="61" />
       <module_usage name="codecs" finding="absolute" line="62" />
@@ -4098,7 +4098,7 @@
     </module_usages>
   </module>
   <module name="posixpath" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/posixpath.py">
-    <optimization-time pass="1" time="0.10" />
+    <optimization-time pass="1" time="0.09" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" />
       <module_usage name="sys" finding="absolute" line="26" />
@@ -4113,7 +4113,7 @@
     </module_usages>
   </module>
   <module name="pprint" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/pprint.py">
-    <optimization-time pass="1" time="0.17" />
+    <optimization-time pass="1" time="0.16" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="37" />
       <module_usage name="dataclasses" finding="absolute" line="38" />
@@ -4125,7 +4125,7 @@
     </module_usages>
   </module>
   <module name="py_compile" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/py_compile.py">
-    <optimization-time pass="1" time="0.03" />
+    <optimization-time pass="1" time="0.02" />
     <module_usages>
       <module_usage name="enum" finding="absolute" line="6" />
       <module_usage name="importlib._bootstrap_external" finding="absolute" line="7" />
@@ -4186,7 +4186,7 @@
     </module_usages>
   </module>
   <module name="re" kind="CompiledPythonPackage" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/re/__init__.py">
-    <optimization-time pass="1" time="0.26" />
+    <optimization-time pass="1" time="0.25" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="enum" finding="absolute" line="124" />
@@ -4206,7 +4206,7 @@
     <module_usages />
   </module>
   <module name="re._compiler" kind="CompiledPythonModule" usage="import fromlist" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/re/_compiler.py">
-    <optimization-time pass="1" time="0.43" />
+    <optimization-time pass="1" time="0.44" />
     <module_usages>
       <module_usage name="_sre" finding="absolute" line="13" />
       <module_usage name="re" finding="absolute" line="14" />
@@ -4223,7 +4223,7 @@
     </module_usages>
   </module>
   <module name="re._parser" kind="CompiledPythonModule" usage="import fromlist" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/re/_parser.py">
-    <optimization-time pass="1" time="0.47" />
+    <optimization-time pass="1" time="0.49" />
     <module_usages>
       <module_usage name="re._constants" finding="absolute" line="15" />
       <module_usage name="unicodedata" finding="absolute" line="343" />
@@ -4248,7 +4248,7 @@
     </module_usages>
   </module>
   <module name="requests" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/requests/__init__.py" distribution="requests">
-    <optimization-time pass="1" time="0.55" />
+    <optimization-time pass="1" time="0.18" />
     <distribution-usages>
       <distribution-usage name="urllib3" />
       <distribution-usage name="charset-normalizer" />
@@ -4363,7 +4363,7 @@
     </module_usages>
   </module>
   <module name="requests.compat" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/requests/compat.py" distribution="requests">
-    <optimization-time pass="1" time="0.18" />
+    <optimization-time pass="1" time="0.55" />
     <module_usages>
       <module_usage name="importlib" finding="absolute" line="10" />
       <module_usage name="sys" finding="absolute" line="11" />
@@ -4384,7 +4384,7 @@
     </module_usages>
   </module>
   <module name="requests.cookies" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/requests/cookies.py" distribution="requests">
-    <optimization-time pass="1" time="0.06" />
+    <optimization-time pass="1" time="0.07" />
     <module_usages>
       <module_usage name="calendar" finding="absolute" line="10" />
       <module_usage name="copy" finding="absolute" line="11" />
@@ -4396,7 +4396,7 @@
     </module_usages>
   </module>
   <module name="requests.exceptions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/requests/exceptions.py" distribution="requests">
-    <optimization-time pass="1" time="0.19" />
+    <optimization-time pass="1" time="0.68" />
     <distribution-usages>
       <distribution-usage name="urllib3" />
     </distribution-usages>
@@ -4450,7 +4450,7 @@
     </module_usages>
   </module>
   <module name="requests.sessions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/requests/sessions.py" distribution="requests">
-    <optimization-time pass="1" time="0.12" />
+    <optimization-time pass="1" time="0.11" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="8" />
       <module_usage name="sys" finding="absolute" line="9" />
@@ -4472,7 +4472,7 @@
     </module_usages>
   </module>
   <module name="requests.status_codes" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/requests/status_codes.py" distribution="requests">
-    <optimization-time pass="1" time="0.02" />
+    <optimization-time pass="1" time="0.01" />
     <module_usages>
       <module_usage name="requests.structures" finding="relative" line="21" />
     </module_usages>
@@ -4486,7 +4486,7 @@
     </module_usages>
   </module>
   <module name="requests.utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/requests/utils.py" distribution="requests">
-    <optimization-time pass="1" time="0.15" />
+    <optimization-time pass="1" time="0.13" />
     <distribution-usages>
       <distribution-usage name="urllib3" />
     </distribution-usages>
@@ -4525,7 +4525,7 @@
     </module_usages>
   </module>
   <module name="runpy" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/runpy.py">
-    <optimization-time pass="1" time="0.08" />
+    <optimization-time pass="1" time="0.07" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="13" />
       <module_usage name="importlib.machinery" finding="absolute" line="14" />
@@ -4550,7 +4550,7 @@
     <module_usages />
   </module>
   <module name="selectors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/selectors.py">
-    <optimization-time pass="1" time="0.11" />
+    <optimization-time pass="1" time="0.49" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="8" />
       <module_usage name="collections" finding="absolute" line="9" />
@@ -4621,7 +4621,7 @@
     </module_usages>
   </module>
   <module name="shutil" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/shutil.py">
-    <optimization-time pass="1" time="0.71" />
+    <optimization-time pass="1" time="0.59" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="7" />
       <module_usage name="sys" finding="absolute" line="8" />
@@ -4690,7 +4690,7 @@
     </module_usages>
   </module>
   <module name="six" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/six.py" distribution="six">
-    <optimization-time pass="1" time="0.29" />
+    <optimization-time pass="1" time="0.21" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="23" />
       <module_usage name="functools" finding="absolute" line="25" />
@@ -4724,7 +4724,7 @@
     </module_usages>
   </module>
   <module name="socks" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/socks.py" distribution="PySocks">
-    <optimization-time pass="1" time="0.18" />
+    <optimization-time pass="1" time="0.17" />
     <module_usages>
       <module_usage name="base64" finding="absolute" line="1" />
       <module_usage name="collections.abc" finding="absolute" line="3" />
@@ -4742,7 +4742,7 @@
     </module_usages>
   </module>
   <module name="ssl" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/ssl.py">
-    <optimization-time pass="1" time="0.28" />
+    <optimization-time pass="1" time="0.27" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="94" />
       <module_usage name="os" finding="absolute" line="95" />
@@ -4776,7 +4776,7 @@
     </module_usages>
   </module>
   <module name="statistics" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/statistics.py">
-    <optimization-time pass="1" time="0.24" />
+    <optimization-time pass="1" time="0.23" />
     <module_usages>
       <module_usage name="math" finding="absolute" line="130" />
       <module_usage name="numbers" finding="absolute" line="131" />
@@ -4820,7 +4820,7 @@
     </module_usages>
   </module>
   <module name="subprocess" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/subprocess.py">
-    <optimization-time pass="1" time="0.49" />
+    <optimization-time pass="1" time="0.48" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="43" />
       <module_usage name="errno" finding="absolute" line="44" />
@@ -4852,7 +4852,7 @@
     </module_usages>
   </module>
   <module name="tarfile" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/tarfile.py">
-    <optimization-time pass="1" time="1.14" />
+    <optimization-time pass="1" time="1.11" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="39" />
       <module_usage name="sys" finding="absolute" line="40" />
@@ -4928,7 +4928,7 @@
     </module_usages>
   </module>
   <module name="threading" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/threading.py">
-    <optimization-time pass="1" time="0.27" />
+    <optimization-time pass="1" time="0.21" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" />
       <module_usage name="sys" finding="absolute" line="4" />
@@ -4966,7 +4966,7 @@
     <module_usages />
   </module>
   <module name="tokenize" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/tokenize.py">
-    <optimization-time pass="1" time="0.34" />
+    <optimization-time pass="1" time="0.17" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="27" />
       <module_usage name="codecs" finding="absolute" line="28" />
@@ -4983,7 +4983,7 @@
     </module_usages>
   </module>
   <module name="traceback" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/traceback.py">
-    <optimization-time pass="1" time="0.22" />
+    <optimization-time pass="1" time="0.23" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="3" />
       <module_usage name="itertools" finding="absolute" line="4" />
@@ -5019,7 +5019,7 @@
     </module_usages>
   </module>
   <module name="typing" kind="CompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/typing.py">
-    <optimization-time pass="1" time="2.21" />
+    <optimization-time pass="1" time="1.91" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="22" />
       <module_usage name="collections" finding="absolute" line="23" />
@@ -5043,7 +5043,7 @@
     </module_usages>
   </module>
   <module name="typing_extensions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/typing_extensions.py" distribution="typing_extensions">
-    <optimization-time pass="1" time="1.31" />
+    <optimization-time pass="1" time="1.13" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="1" />
       <module_usage name="collections" finding="absolute" line="2" />
@@ -5086,7 +5086,7 @@
     </module_usages>
   </module>
   <module name="urllib.parse" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/urllib/parse.py">
-    <optimization-time pass="1" time="0.36" />
+    <optimization-time pass="1" time="0.34" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="34" />
       <module_usage name="collections.namedtuple" finding="not-found" line="34" />
@@ -5100,7 +5100,7 @@
     </module_usages>
   </module>
   <module name="urllib.request" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/urllib/request.py">
-    <optimization-time pass="1" time="1.65" />
+    <optimization-time pass="1" time="1.22" />
     <module_usages>
       <module_usage name="base64" finding="absolute" line="84" />
       <module_usage name="bisect" finding="absolute" line="85" />
@@ -5198,7 +5198,7 @@
     </module_usages>
   </module>
   <module name="urllib3._request_methods" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/urllib3/_request_methods.py" distribution="urllib3">
-    <optimization-time pass="1" time="0.02" />
+    <optimization-time pass="1" time="0.01" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="json" finding="absolute" line="3" />
@@ -5261,7 +5261,7 @@
     </module_usages>
   </module>
   <module name="urllib3.connectionpool" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/urllib3/connectionpool.py" distribution="urllib3">
-    <optimization-time pass="1" time="0.19" />
+    <optimization-time pass="1" time="0.56" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="errno" finding="absolute" line="3" />
@@ -5299,7 +5299,7 @@
     </module_usages>
   </module>
   <module name="urllib3.contrib.pyopenssl" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/urllib3/contrib/pyopenssl.py" distribution="urllib3">
-    <optimization-time pass="1" time="0.27" />
+    <optimization-time pass="1" time="0.66" />
     <distribution-usages>
       <distribution-usage name="pyOpenSSL" />
       <distribution-usage name="cryptography" />
@@ -5326,7 +5326,7 @@
     </module_usages>
   </module>
   <module name="urllib3.contrib.socks" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/urllib3/contrib/socks.py" distribution="urllib3">
-    <optimization-time pass="1" time="0.11" />
+    <optimization-time pass="1" time="0.10" />
     <distribution-usages>
       <distribution-usage name="PySocks" />
     </distribution-usages>
@@ -5346,7 +5346,7 @@
     </module_usages>
   </module>
   <module name="urllib3.exceptions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/urllib3/exceptions.py" distribution="urllib3">
-    <optimization-time pass="1" time="0.90" />
+    <optimization-time pass="1" time="0.43" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="socket" finding="absolute" line="3" />
@@ -5407,7 +5407,7 @@
     </module_usages>
   </module>
   <module name="urllib3.response" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/urllib3/response.py" distribution="urllib3">
-    <optimization-time pass="1" time="0.20" />
+    <optimization-time pass="1" time="0.18" />
     <distribution-usages>
       <distribution-usage name="Brotli" />
       <distribution-usage name="zstandard" />
@@ -5477,7 +5477,7 @@
     </module_usages>
   </module>
   <module name="urllib3.util.request" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/urllib3/util/request.py" distribution="urllib3">
-    <optimization-time pass="1" time="0.11" />
+    <optimization-time pass="1" time="0.02" />
     <distribution-usages>
       <distribution-usage name="Brotli" />
       <distribution-usage name="zstandard" />
@@ -5540,7 +5540,7 @@
     </module_usages>
   </module>
   <module name="urllib3.util.ssl_match_hostname" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/urllib3/util/ssl_match_hostname.py" distribution="urllib3">
-    <optimization-time pass="1" time="0.03" />
+    <optimization-time pass="1" time="0.02" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="7" />
       <module_usage name="ipaddress" finding="absolute" line="9" />
@@ -5603,7 +5603,7 @@
     </module_usages>
   </module>
   <module name="uuid" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/uuid.py">
-    <optimization-time pass="1" time="0.11" />
+    <optimization-time pass="1" time="0.10" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="47" />
       <module_usage name="sys" finding="absolute" line="48" />
@@ -5625,7 +5625,7 @@
     </module_usages>
   </module>
   <module name="warnings" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/warnings.py">
-    <optimization-time pass="1" time="0.12" />
+    <optimization-time pass="1" time="0.11" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" />
       <module_usage name="sys" finding="absolute" line="23" />
@@ -5642,7 +5642,7 @@
     </module_usages>
   </module>
   <module name="weakref" kind="CompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.prefix}/lib/python3.12/weakref.py">
-    <optimization-time pass="1" time="0.16" />
+    <optimization-time pass="1" time="0.42" />
     <module_usages>
       <module_usage name="_weakref" finding="absolute" line="12" />
       <module_usage name="_weakrefset" finding="absolute" line="22" />
@@ -5752,7 +5752,7 @@
     </module_usages>
   </module>
   <module name="webview.dom.propsdict" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/webview/dom/propsdict.py" distribution="pywebview">
-    <optimization-time pass="1" time="0.03" />
+    <optimization-time pass="1" time="0.05" />
     <module_usages>
       <module_usage name="json" finding="absolute" line="1" />
       <module_usage name="enum" finding="absolute" line="2" />
@@ -5842,7 +5842,7 @@
     </module_usages>
   </module>
   <module name="webview.platforms.cocoa" kind="CompiledPythonModule" usage="import" reason="Platforms package of webview used on 'Darwin'." source_path="${sys.prefix}/lib/python3.12/site-packages/webview/platforms/cocoa.py" distribution="pywebview">
-    <optimization-time pass="1" time="0.42" />
+    <optimization-time pass="1" time="0.36" />
     <distribution-usages>
       <distribution-usage name="pyobjc-framework-Cocoa" />
       <distribution-usage name="pyobjc-framework-WebKit" />
@@ -5933,7 +5933,7 @@
     </module_usages>
   </module>
   <module name="webview.window" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/webview/window.py" distribution="pywebview">
-    <optimization-time pass="1" time="0.16" />
+    <optimization-time pass="1" time="0.15" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
     </distribution-usages>
@@ -5975,13 +5975,13 @@
     </module_usages>
   </module>
   <module name="xml.etree.ElementPath" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/xml/etree/ElementPath.py">
-    <optimization-time pass="1" time="0.09" />
+    <optimization-time pass="1" time="0.08" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="59" />
     </module_usages>
   </module>
   <module name="xml.etree.ElementTree" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/xml/etree/ElementTree.py">
-    <optimization-time pass="1" time="0.36" />
+    <optimization-time pass="1" time="0.35" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="95" />
       <module_usage name="re" finding="absolute" line="96" />
@@ -6020,7 +6020,7 @@
     </module_usages>
   </module>
   <module name="zipfile" kind="CompiledPythonPackage" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/zipfile/__init__.py">
-    <optimization-time pass="1" time="0.52" />
+    <optimization-time pass="1" time="0.49" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="binascii" finding="absolute" line="6" />
@@ -6065,7 +6065,7 @@
     </module_usages>
   </module>
   <module name="zipfile._path" kind="CompiledPythonPackage" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.prefix}/lib/python3.12/zipfile/_path/__init__.py">
-    <optimization-time pass="1" time="0.12" />
+    <optimization-time pass="1" time="0.11" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="io" finding="absolute" line="1" />
@@ -6089,7 +6089,7 @@
     <module_usages />
   </module>
   <module name="zstandard" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/zstandard/__init__.py" distribution="zstandard">
-    <optimization-time pass="1" time="0.11" />
+    <optimization-time pass="1" time="0.09" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="__future__" finding="absolute" line="9" />
@@ -6118,7 +6118,7 @@
     <module_usages />
   </module>
   <module name="zstandard.backend_cffi" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/zstandard/backend_cffi.py" distribution="zstandard">
-    <optimization-time pass="1" time="0.63" />
+    <optimization-time pass="1" time="0.60" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="9" />
       <module_usage name="io" finding="absolute" line="86" />
@@ -6127,7 +6127,7 @@
     </module_usages>
   </module>
   <performance>
-    <memory_usage name="after_launch" value="56180736" />
+    <memory_usage name="after_launch" value="55410688" />
   </performance>
   <data_composer blob_size="None" />
   <command_line>

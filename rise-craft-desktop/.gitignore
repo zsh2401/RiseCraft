@@ -7,8 +7,11 @@ jre
 game
 logs
 RiseCraft
+*.bin
 *.build
+*-crash-report.xml
 fake-local
 data
+*.dist
 *.zip
 full-version.json

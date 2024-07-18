@@ -7,9 +7,8 @@ import json
 from shared.api import fetch_version_info
 from shared.version_engine.local import read_local
 class Bridge:
-    def __init__(self,webview) -> None:
+    def __init__(self) -> None:
         self.registry = {}
-        self.webview = webview
         
     def register(self, ns:str,obj:any):
         self.registry[ns] = obj
