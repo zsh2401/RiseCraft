@@ -3,10 +3,10 @@ build:
 	@-mkdir RiseCraft
 	-mv main.bin RiseCraft/RiseCraft
 	-mv main.exe RiseCraft/RiseCraft.exe
-	cp -rf jre RiseCraft/
-	cp -rf game RiseCraft/
-	cp -rf version.json RiseCraft/
-	cp RiseCraft/RiseCraft fake-local
+	-cp -rf jre RiseCraft/
+	-cp -rf game RiseCraft/
+	-cp -rf version.json RiseCraft/
+	# -cp RiseCraft/RiseCraft fake-local
 
 run: RiseCraft
 	./RiseCraft
