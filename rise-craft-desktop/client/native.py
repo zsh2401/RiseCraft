@@ -25,9 +25,10 @@ class Bridge:
             raise e
     
 class RiseCraft:
-    def __init__(self,root_dir,api_url):
+    def __init__(self,root_dir,api_url,webview):
         self.root_dir = root_dir
         self.api_url = api_url
+        self.webview = webview
     
     def save(self,key,value):
         os.makedirs(os.path.join(self.root_dir,"data"),exist_ok=True)
@@ -73,4 +74,4 @@ class RiseCraft:
         os._exit(code)
         
     def launch(self,options):
-        launch_mc_2(options)
+        launch_mc_2(options,self.webview)

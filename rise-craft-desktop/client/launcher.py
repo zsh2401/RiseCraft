@@ -1,8 +1,9 @@
 import webview
+import webview.js
 from .native import Bridge, RiseCraft
 
 def run(url,root_dir,api):
     bridge = Bridge()
-    bridge.register("RiseCraft", RiseCraft(root_dir,api))
-    webview.create_window('RiseCraft', url, js_api=bridge)
+    win = webview.create_window('RiseCraft', url, js_api=bridge)
+    bridge.register("RiseCraft", RiseCraft(root_dir,api,win))
     webview.start()
