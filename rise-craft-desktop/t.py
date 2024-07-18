@@ -1,11 +1,35 @@
-from time import sleep
-from random import random,randint
-from tqdm import tqdm,trange
-with tqdm(["a","b"]) as t:
-    for i in t:
-        # Description will be displayed on the left
-        t.set_description('GEN %s' % i)
-        # Postfix will be displayed on the right,
-        # formatted automatically based on argument's datatype
-        # t.set_postfix()
-        sleep(0.1)
+# import minecraft_launcher_lib
+
+# current_max = 0
+
+
+# def set_status(status: str):
+#     print(status)
+
+
+# def set_progress(progress: int):
+#     if current_max != 0:
+#         print(f"{progress}/{current_max}")
+
+
+# def set_max(new_max: int):
+#     global current_max
+#     current_max = new_max
+
+
+# minecraft_directory = minecraft_launcher_lib.utils.get_minecraft_directory()
+
+# callback = {
+#     "setStatus": set_status,
+#     "setProgress": set_progress,
+#     "setMax": set_max
+# }
+
+# minecraft_launcher_lib.install.install_minecraft_version("1.18.2", "./fake-local", callback=callback)
+# forge_version = minecraft_launcher_lib.forge.find_forge_version("1.18.2")
+# print("installing forge")
+# minecraft_launcher_lib.forge.install_forge_version(forge_version, "./fake-local",)
+# print(forge_version)
+from client.native import RiseCraft
+RiseCraft(".",".").save("a",{"code":1})
+print(RiseCraft(".",".").read("a"))

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export class Bridge {
     private readonly schema = "native"
-
+    
     async registerOnWindow(ns: string) {
         const proxy = new Proxy({}, {
             get: (_target: any, propName: string) => {

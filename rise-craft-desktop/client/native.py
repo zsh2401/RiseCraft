@@ -3,15 +3,17 @@ import uuid
 import minecraft_launcher_lib
 import os
 import subprocess
-
+import json
 from shared.api import fetch_version_info
 from shared.version_engine.local import read_local
 class Bridge:
-    def __init__(self) -> None:
+    def __init__(self,webview) -> None:
         self.registry = {}
+        self.webview = webview
+        
     def register(self, ns:str,obj:any):
         self.registry[ns] = obj
-        
+    
     def ns(self,ns,fn,args):
         try:
             obj = self.registry[ns]
@@ -24,6 +26,23 @@ class RiseCraft:
     def __init__(self,root_dir,api_url):
         self.root_dir = root_dir
         self.api_url = api_url
+    
+    def save(self,key,value):
+        os.makedirs(os.path.join(self.root_dir,"data"),exist_ok=True)
+        with open(os.path.join(self.root_dir,"data",key + ".rcd"),"w",encoding="utf-8") as f:
+            json.dump(value,f)
+        
+    def read(self,key):
+        os.makedirs(os.path.join(self.root_dir,"data"),exist_ok=True)
+        try:
+            with open(os.path.join(self.root_dir,"data",key + ".rcd"),"r",encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(e)
+            return None
+            
+    def version(self):
+        return read_local(self.root_dir,False)
     
     def getJavaPaths(self):
         # if os.
@@ -56,24 +75,42 @@ class RiseCraft:
         shutil.copy(src,dest)
         there = os.path.abspath(self.root_dir)
         command = [dest,"update",there]
-        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
+        process = subprocess.Popen(command, start_new_session=True)
+        print(process)
         os._exit(0)
     
     def exitLauncher(self,code):
         os._exit(code)
         
     def launch(self,options):
-        print(options)
+        # print(options)
         minecraft_directory = options["gamePath"]
         print("Installing")
-        # minecraft_launcher_lib.install.install_minecraft_version(options["baseVersionName"], minecraft_directory,callback)
+        minecraft_launcher_lib.install.install_minecraft_version(options["baseVersionName"], minecraft_directory,callback)
         print("Installed")
-        print(minecraft_launcher_lib.utils.get_available_versions(minecraft_directory))
-        minecraft_launcher_lib.utils.get_available_versions(minecraft_directory)
-        options["executablePath"] = options["java"]
-        options["gameDirectory"] = options["gamePath"]
-        minecraft_command = minecraft_launcher_lib.command.get_minecraft_command(options["versionName"], minecraft_directory, options)
-        proc = subprocess.Popen(minecraft_command)
+        # print(minecraft_launcher_lib.utils.get_available_versions(minecraft_directory))
+        # minecraft_launcher_lib.utils.get_available_versions(minecraft_directory)
+        launch_options = {
+            "username":options["userName"],
+            "executablePath": options["java"],
+            # "gameDirectory":options["gamePath"],
+            "jvmArguments": ["-Xmx4G", "-Xms4G"]
+        }
+        print(minecraft_directory,options["versionName"])
+        minecraft_command:list[str] = minecraft_launcher_lib.command.get_minecraft_command(options["versionName"], minecraft_directory, launch_options)
+        print(minecraft_command)
+        for i in range(len(minecraft_command)):
+        
+            if minecraft_command[i] == "-cp":
+                cpni = i + 1
+                print("cpni",cpni)
+            elif minecraft_command[i] == "launchTarget":
+                print("launch_target", minecraft_command[i])
+        
+        # return
+        minecraft_command[cpni]= ":".join(list(set(minecraft_command[cpni].split(":"))))
+            
+        proc = subprocess.call(minecraft_command)
 
 
 def set_status(status: str):

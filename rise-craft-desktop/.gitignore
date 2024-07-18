@@ -8,3 +8,5 @@ game
 logs
 RiseCraft
 *.build
+fake-local
+data
