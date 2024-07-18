@@ -6,6 +6,7 @@ import subprocess
 import json
 from shared.api import fetch_version_info
 from .start_update_process import start_update_process
+from .launch_mc import launch_mc
 from shared.version_engine.local import read_local
 class Bridge:
     def __init__(self) -> None:
@@ -71,50 +72,5 @@ class RiseCraft:
         os._exit(code)
         
     def launch(self,options):
-        # print(options)
-        minecraft_directory = options["gamePath"]
-        print("Installing")
-        minecraft_launcher_lib.install.install_minecraft_version(options["baseVersionName"], minecraft_directory,callback)
-        print("Installed")
-        # print(minecraft_launcher_lib.utils.get_available_versions(minecraft_directory))
-        # minecraft_launcher_lib.utils.get_available_versions(minecraft_directory)
-        launch_options = {
-            "username":options["userName"],
-            "executablePath": options["java"],
-            "jvmArguments": ["-Xmx4G", "-Xms4G"]
-        }
-        print(minecraft_directory,options["versionName"])
-        minecraft_command:list[str] = minecraft_launcher_lib.command.get_minecraft_command(options["versionName"], minecraft_directory, launch_options)
-        print(minecraft_command)
-        for i in range(len(minecraft_command)):
-        
-            if minecraft_command[i] == "-cp":
-                cpni = i + 1
-                print("cpni",cpni)
-            elif minecraft_command[i] == "launchTarget":
-                print("launch_target", minecraft_command[i])
-        
-        # return
-        minecraft_command[cpni]= ":".join(list(set(minecraft_command[cpni].split(":"))))
-            
-        proc = subprocess.call(minecraft_command)
+        launch_mc(options)
 
-
-def set_status(status: str):
-    print(status)
-
-
-def set_progress(progress: int):
-    if current_max != 0:
-        print(f"{progress}/{current_max}")
-
-
-def set_max(new_max: int):
-    global current_max
-    current_max = new_max
-    
-callback = {
-    "setStatus": set_status,
-    "setProgress": set_progress,
-    "setMax": set_max
-}
