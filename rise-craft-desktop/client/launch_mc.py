@@ -1,5 +1,7 @@
+import hashlib
 import minecraft_launcher_lib
 import subprocess
+import os
 def launch_mc(options):
         # print(options)
         minecraft_directory = options["gamePath"]
@@ -15,6 +17,8 @@ def launch_mc(options):
             "username":options["userName"],
             "executablePath": options["java"],
             "launcherName": "RiseCraft",
+            "uuid": str(hashlib.md5(str.encode(options["userName"])).digest()),
+            "token":""
         }
         if "resolutionWidth" in options:
             launch_options["resolutionWidth"] = options["resolutionWidth"]
@@ -42,10 +46,13 @@ def launch_mc(options):
             elif minecraft_command[i] == "launchTarget":
                 print("launch_target", minecraft_command[i])
         
-        # return
         minecraft_command[cpni]= ":".join(list(set(minecraft_command[cpni].split(":"))))
-            
-        proc = subprocess.call(minecraft_command)
+        print(minecraft_command)
+        with open("command.txt","w") as f:
+            import json
+            json.dump(minecraft_command,f)
+        print(minecraft_directory)
+        proc = subprocess.call(minecraft_command,cwd=os.path.join(minecraft_directory,".."))
         
 def set_status(status: str):
     print(status)
@@ -65,3 +72,7 @@ callback = {
     "setProgress": set_progress,
     "setMax": set_max
 }
+
+
+def my_launch_mc():
+    pass
