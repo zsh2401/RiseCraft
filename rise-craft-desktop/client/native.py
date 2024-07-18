@@ -5,6 +5,7 @@ import os
 import subprocess
 import json
 from shared.api import fetch_version_info
+from .start_update_process import start_update_process
 from shared.version_engine.local import read_local
 class Bridge:
     def __init__(self) -> None:
@@ -44,7 +45,6 @@ class RiseCraft:
         return read_local(self.root_dir,False)
     
     def getJavaPaths(self):
-        # if os.
         system = platform.system().lower()
         machine = platform.machine().lower()
         if system == "windows" and machine.endswith(64):
@@ -65,18 +65,7 @@ class RiseCraft:
         return code < remoteCode
     
     def performUpgrade(self):
-        import tempfile
-        import shutil
-        tmp = tempfile.gettempdir()
-        src = os.path.abspath(os.path.join(self.root_dir,"RiseCraft"))
-        dest = os.path.join(tmp,"RiseCraft" + str(uuid.uuid4()))
-        print(src,dest)
-        shutil.copy(src,dest)
-        there = os.path.abspath(self.root_dir)
-        command = [dest,"update",there]
-        process = subprocess.Popen(command, start_new_session=True)
-        print(process)
-        os._exit(0)
+        start_update_process()
     
     def exitLauncher(self,code):
         os._exit(code)
