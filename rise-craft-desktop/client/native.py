@@ -81,7 +81,6 @@ class RiseCraft:
         launch_options = {
             "username":options["userName"],
             "executablePath": options["java"],
-            # "gameDirectory":options["gamePath"],
             "jvmArguments": ["-Xmx4G", "-Xms4G"]
         }
         print(minecraft_directory,options["versionName"])

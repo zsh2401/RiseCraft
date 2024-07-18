@@ -17,7 +17,10 @@ RiseCraft.macos:
 	mv main.bin RiseCraft.macos
 
 RiseCraft.exe:
-	python -m nuitka main.py --onefile --windows-disable-console
+	python -m nuitka main.py --onefile --windows-disable-console --windows-icon-from-ico=assets/icon.png
+	mv main.exe RiseCraft.exe
+RiseCraft.exe-pyinstaller:
+	pyinstaller main.py --onefile --icon=assets/icon.png
 	mv main.exe RiseCraft.exe
 
 run: RiseCraft
@@ -27,4 +30,7 @@ dev:
 clean:
 	rm -rf logs
 	rm -rf RiseCraft
+	rm -rf fake-local
+	rm -rf data
+	rm -rf main.dist main.build
 	rm -rf RiseCraft.bin RiseCraft.exe
