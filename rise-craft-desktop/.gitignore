@@ -10,3 +10,4 @@ RiseCraft
 *.build
 fake-local
 data
+*.zip
