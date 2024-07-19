@@ -14,6 +14,7 @@ def support_server(oss:str,webDir):
     lastTime = 0
     data = None
     def get_full_version():
+        global data
         if (data is None) or ((time.time() - lastTime) > 60):
             print("refresh full version cache")
             lastTime = time.time()
