@@ -1,14 +1,19 @@
 declare global {
     interface Window {
         RiseCraft: RiseCraftNativeAPI
+        RiseCraftUpdater: RiseCraftUpdaterAPI
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        RiseCraftFn:Record<string,any>
+        RiseCraftFn: Record<string, any>
         pywebview: {
 
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             api: any
         }
     }
+}
+
+export interface RiseCraftUpdaterAPI {
+
 }
 
 export interface RiseCraftNativeAPI {
@@ -18,8 +23,8 @@ export interface RiseCraftNativeAPI {
     launch(options: RiseCraftLaunchOptions): Promise<void>
     getJavaPaths(): Promise<string[]>
     appDataDir(): Promise<string>
-    hide():Promise<void>
-    show():Promise<void>
+    hide(): Promise<void>
+    show(): Promise<void>
     getVersions(gamePath: string): Promise<string[]>
     isUpgradable(): Promise<boolean>
     performUpgrade(): Promise<void>
@@ -44,7 +49,7 @@ export interface RiseCraftLaunchOptions {
     gamePath: string
     server?: string
     port?: number
-    resolutionWidth:number
-    resolutionHeight:number
-    jvmArguments:string[]
+    resolutionWidth: number
+    resolutionHeight: number
+    jvmArguments: string[]
 }

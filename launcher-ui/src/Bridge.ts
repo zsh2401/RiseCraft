@@ -1,7 +1,8 @@
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export class Bridge {
     private readonly schema = "native"
-    
+
     async registerOnWindow(ns: string) {
         const proxy = new Proxy({}, {
             get: (_target: any, propName: string) => {
@@ -33,4 +34,12 @@ export class Bridge {
     async callNativePywebview<R>(ns: string, fn: string, ...args: unknown[]): Promise<R> {
         return await window.pywebview.api.ns(ns, fn, args)
     }
+}
+
+
+export const bridge = new Bridge();
+export async function prepareForBridge() {
+    window.RiseCraftFn = {}
+    await bridge.registerOnWindow("RiseCraft")
+    await bridge.registerOnWindow("RiseCraftUpdater")
 }
