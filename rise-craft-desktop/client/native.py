@@ -71,7 +71,10 @@ class RiseCraft:
         return self.root_dir
     
     def isUpgradable(self):
-        code = read_local(self.root_dir,False)["code"]
+        try:
+            code = read_local(self.root_dir,False)["code"]
+        except:
+            code = 0
         remoteCode = fetch_version_info(self.api_url)["code"]
         print(code,remoteCode)
         return code < remoteCode

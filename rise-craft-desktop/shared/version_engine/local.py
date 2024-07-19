@@ -4,13 +4,6 @@ import hashlib
 
 from shared.version_engine.version import FileInfo, Version
 def read_local(root_dir,fileList=True,download_prefix:str=None)->Version:
-    print(os.path.join(root_dir,"version.json"))
-    if os.path.exists(os.path.join(root_dir,"version.json")) == False:
-        return {
-            "code":0,
-            "name": "0.0.1",
-            "fileList":[]
-        }
     with open(os.path.join(root_dir,"version.json")) as f:
         versionJson = json.loads(f.read())
         return {
