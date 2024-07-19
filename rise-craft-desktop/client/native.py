@@ -44,6 +44,12 @@ class RiseCraft:
             print(e)
             return None
             
+    def show(self):
+        self.webview.show()
+        
+    def hide(self):
+        self.webview.hide()
+        
     def version(self):
         return read_local(self.root_dir,False)
     
