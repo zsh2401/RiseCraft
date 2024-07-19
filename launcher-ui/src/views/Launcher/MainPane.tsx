@@ -28,8 +28,8 @@ export function Content() {
                 userName,
                 jvmArguments: ["-Xmx4096m"],
                 baseVersionName: "1.18.2",
-                resolutionHeight: 600,
-                resolutionWidth: 800,
+                resolutionHeight: 720,
+                resolutionWidth: 1280,
                 gamePath: appData + "/game/.minecraft"
             })
             setFailed(true)
