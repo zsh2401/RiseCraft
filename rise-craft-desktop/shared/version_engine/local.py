@@ -34,7 +34,7 @@ def list_files_and_folders(root_dir,download_prefix:str=None)->list[FileInfo]:
                       "path":clean_path(root_dir,os.path.join(dirpath, filename)),
                       "size":os.path.getsize(path)}
             if download_prefix is not None:
-                entity["url"] = download_prefix + entity["path"]
+                entity["url"] = download_prefix + entity["path"].replace("\\","/")
                 
             all_files_and_folders.append(entity)
     return all_files_and_folders
