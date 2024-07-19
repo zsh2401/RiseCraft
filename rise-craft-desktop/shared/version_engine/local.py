@@ -24,17 +24,17 @@ def list_files_and_folders(root_dir,download_prefix:str=None)->list[FileInfo]:
         for dirname in dirnames:
             entity = {"isFile": False,
                       "md5": None,
-                      "path":clean_path(root_dir,os.path.join(dirpath, dirname)),
+                      "path":safe_path(root_dir,os.path.join(dirpath, dirname)),
                       "size":0}
             all_files_and_folders.append(entity)
         for filename in filenames:
             path = os.path.join(dirpath, filename)
             entity = {"isFile": True,
                       "md5": calculate_md5(path),
-                      "path":clean_path(root_dir,os.path.join(dirpath, filename)),
+                      "path":safe_path(root_dir,os.path.join(dirpath, filename)),
                       "size":os.path.getsize(path)}
             if download_prefix is not None:
-                entity["url"] = download_prefix + entity["path"].replace("\\","/")
+                entity["url"] = download_prefix + entity["path"]
                 
             all_files_and_folders.append(entity)
     return all_files_and_folders
@@ -51,8 +51,10 @@ def calculate_md5(file_path):
     # 获取十六进制的MD5哈希值
     return md5_hash.hexdigest()
 
-def clean_path(start:str,full:str):
+def safe_path(start:str,full:str):
     cutted = full[len(start):]
     if cutted.startswith("/"):
         return cutted[1:]
-    return cutted
+    elif cutted.startswith("\\"):
+        return cutted[1:]
+    return cutted.replace("\\","/")
