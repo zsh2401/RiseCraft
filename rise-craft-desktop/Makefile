@@ -20,7 +20,7 @@ RiseCraft.exe:
 	python -m nuitka main.py --onefile --windows-disable-console --windows-icon-from-ico=assets/icon.ico
 	mv main.exe RiseCraft.exe
 win-debug:
-	pyinstaller main.py --onefile --icon=assets/icon.ico
+	pyinstaller main.py --onefile -w --icon=assets/icon.ico
 	mv dist/main.exe RiseCraft.exe
 
 run: RiseCraft
