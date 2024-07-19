@@ -16,9 +16,9 @@ export function Updater(props: {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             }catch(err:any){
                 if(err instanceof Error){
-                    alert(err.message)
+                    alert("无法检查更新:" + err.message)
                 }else{
-                    alert(JSON.stringify(err))
+                    alert( "无法检查更新:" + JSON.stringify(err))
                 }
                 props.onNoUpdate()
             }

@@ -3,7 +3,7 @@
 export class Bridge {
     private readonly schema = "native"
 
-    async registerOnWindow(ns: string) {
+    registerOnWindow(ns: string) {
         const proxy = new Proxy({}, {
             get: (_target: any, propName: string) => {
                 return async (...args: unknown[]) => {
