@@ -18,6 +18,8 @@ export interface RiseCraftNativeAPI {
     launch(options: RiseCraftLaunchOptions): Promise<void>
     getJavaPaths(): Promise<string[]>
     appDataDir(): Promise<string>
+    hide():Promise<void>
+    show():Promise<void>
     getVersions(gamePath: string): Promise<string[]>
     isUpgradable(): Promise<boolean>
     performUpgrade(): Promise<void>

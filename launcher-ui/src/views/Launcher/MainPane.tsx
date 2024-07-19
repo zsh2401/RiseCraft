@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import "./content.scss"
 import { Button, Input } from 'antd'
 import { Status } from './Stauts'
+import { sleep } from 'sz-react-support'
 export function Content() {
     const [appData, setAppData] = useState<string>()
     const [java, setJava] = useState<string>()
@@ -13,6 +14,7 @@ export function Content() {
     useEffect(()=>{
         (async ()=>{
             setAppData(await window.RiseCraft.appDataDir())
+            // await window.RiseCraft.hide(
         })()
     },[])
     const launch = useCallback(async () => {
