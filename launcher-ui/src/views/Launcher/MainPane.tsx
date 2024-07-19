@@ -62,6 +62,7 @@ export function Content() {
             <br /><br />
             <Button loading={launching} size='large' type='primary' onClick={launch}>启动</Button>
         </div>
+        {navigator.userAgent}
         {
             (launching || failed) && <Status successLaunched={launched} />
         }

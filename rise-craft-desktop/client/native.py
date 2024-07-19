@@ -55,8 +55,11 @@ class RiseCraft:
         bin = f"{self.root_dir}/jre/{system}/{machine}/bin"
         if platform.system().lower() != "windows":
             os.system(f"chmod +x {bin}/*")
-
-        return [f"{bin}/java"]
+            
+        if os.name != "posix":
+            return [f"{bin}/javaw"]
+        else:
+            return [f"{bin}/java"]
     
     def appDataDir(self):
         return self.root_dir
