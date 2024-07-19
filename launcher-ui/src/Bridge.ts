@@ -55,4 +55,5 @@ export async function prepareForBridge() {
             }
         })()
     })
+    alert(JSON.stringify(await window.RiseCraft.executeScript("echo ok")))
 }
