@@ -1,10 +1,12 @@
 import platform
+import threading
 import uuid
 import minecraft_launcher_lib
 import os
 import subprocess
 import json
 from shared.api import fetch_version_info
+from .execute_script import execute_script
 from .start_update_process import start_update_process
 from .launch_mc import launch_mc
 from .launch_mc2 import launch_mc_2
@@ -69,6 +71,18 @@ class RiseCraft:
     
     def appDataDir(self):
         return self.root_dir
+    
+    def systemName(self):
+        return platform.system()
+
+    def machine(self):
+        return platform.machine()
+    
+    def executeScript(self,script:str,call_id:str=None):
+        return execute_script(script,self.webview,call_id)
+            
+    def system(self,command):       
+        return os.popen(command).read()
     
     def isUpgradable(self):
         try:

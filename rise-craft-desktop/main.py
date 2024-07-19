@@ -3,6 +3,7 @@ import os
 import update
 import server
 from shared.version_engine.local import read_local
+from shared.cleaner import clean
 import json
 import sys
 import client.launcher
@@ -18,6 +19,8 @@ elif len(sys.argv) > 1 and sys.argv[1] == "generate":
     data =  read_local(sys.argv[2],True,sys.argv[3])
     with open("full-version.json","w") as f:
         json.dump(data,f)
+elif len(sys.argv) > 1 and sys.argv[1] == "clean":
+    clean(os.path.abspath(sys.argv[2]))
 else:
     url = "http://localhost:5173" if "DEBUG" in os.environ else "https://api.mc.zsh2401.top"
     # client.launcher.run("https://api.mc.zsh2401.top",os.path.dirname(os.path.abspath(sys.argv[0])))

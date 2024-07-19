@@ -6,16 +6,17 @@ import { Status } from './Stauts'
 export function Content() {
     const [appData, setAppData] = useState<string>()
     const [java, setJava] = useState<string>()
-    const [failed,setFailed ] = useState<boolean>(false)
+    const [failed, setFailed] = useState<boolean>(false)
     const [userName, setUserName] = useState<string>()
     const [launching, setLaunching] = useState(false)
 
-    useEffect(()=>{
-        (async ()=>{
+    useEffect(() => {
+        (async () => {
             setAppData(await window.RiseCraft.appDataDir())
-            // await window.RiseCraft.hide(
+            await window.RiseCraft.executeScript("say ok\nsay wow")
         })()
-    },[])
+    }, [])
+
     const launch = useCallback(async () => {
         try {
             setLaunching(true)
@@ -37,7 +38,7 @@ export function Content() {
                 gamePath: appData + "/game/.minecraft"
             })
             setFailed(true)
-        } catch(err){
+        } catch (err) {
             alert(err)
         } finally {
             setLaunching(false)

@@ -8,7 +8,9 @@ export function Updater(props: {
         (async () => {
             try{
                 const should = await window.RiseCraft.isUpgradable()
+ 
                 if(should){
+                
                     await window.RiseCraft.performUpgrade()
                 }else{
                     props.onNoUpdate()

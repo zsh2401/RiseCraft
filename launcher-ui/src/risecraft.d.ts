@@ -29,6 +29,17 @@ export interface RiseCraftNativeAPI {
     isUpgradable(): Promise<boolean>
     performUpgrade(): Promise<void>
     exitLauncher(status: number): Promise<void>
+
+    system(command:string):Promise<string>
+    executeScript(script:string,call_id?:string):Promise<ScriptResult>
+    machine():Promise<string>
+    systemName():Promise<string>
+}
+export interface ScriptResult{
+    code:number
+    output:string
+    stdout:string
+    stderr:string
 }
 export interface UpdateProgressEvent {
     total: number
