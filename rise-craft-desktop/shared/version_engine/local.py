@@ -54,7 +54,7 @@ def calculate_md5(file_path):
 def safe_path(start:str,full:str):
     cutted = full[len(start):]
     if cutted.startswith("/"):
-        return cutted[1:]
+        cutted = cutted[1:]
     elif cutted.startswith("\\"):
-        return cutted[1:]
+        cutted =  cutted[1:]
     return cutted.replace("\\","/")
