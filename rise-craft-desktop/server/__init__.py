@@ -11,16 +11,17 @@ def support_server(oss:str,webDir):
     from flask import Flask
     app = Flask(__name__)
     
-    lastTime = 0
-    data = None
+    record = {
+        "data":None,
+        "lastTime":0
+    }
     def get_full_version():
-        global data
-        if (data is None) or ((time.time() - lastTime) > 60):
+        if (record["data"] is None) or ((time.time() - record["lastTime"]) > 60):
             print("refresh full version cache")
             lastTime = time.time()
             resp = requests.get(oss)
-            data = resp.json()
-        return data
+            record["data"] = resp.json()
+        return record["data"]
 
     @app.route('/<path:path>')
     def serve_static(path):
