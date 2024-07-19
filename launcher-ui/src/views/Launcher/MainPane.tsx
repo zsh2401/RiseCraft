@@ -13,7 +13,6 @@ export function Content() {
     useEffect(() => {
         (async () => {
             setAppData(await window.RiseCraft.appDataDir())
-            await window.RiseCraft.executeScript("say ok\nsay wow")
         })()
     }, [])
 
@@ -21,10 +20,8 @@ export function Content() {
         try {
             setLaunching(true)
             if (!java || !userName) {
-                // alert("找不到Java或")
                 return
             }
-            // alert("what?")
             await window.RiseCraft.launch({
                 java,
                 versionName: "1.18.2-40.2.21",
@@ -33,8 +30,6 @@ export function Content() {
                 baseVersionName: "1.18.2",
                 resolutionHeight: 600,
                 resolutionWidth: 800,
-                // server: "ip.mc.qqq",
-                // port: 123,
                 gamePath: appData + "/game/.minecraft"
             })
             setFailed(true)
