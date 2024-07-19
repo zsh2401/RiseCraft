@@ -12,12 +12,15 @@ class MyWatcher(Watcher):
         self.webview = webview
         
     def handle(self, event: any, *args, **kwargs) -> None:
-        if isinstance(event, XmlStreamEvent):
-            r = event.message
-        else:
-            r = str(event)
-        print(r)
-        call_js_fn(self.webview,"onInstalling", None,r)
+        try:
+            if isinstance(event, XmlStreamEvent):
+                r = event.message
+            else:
+                r = str(event)
+            print(r)
+            call_js_fn(self.webview,"onInstalling", None,r)
+        except Exception as e:
+            print(e)
         
 class MyRunner(StreamRunner):
     def __init__(self,webview) -> None:
@@ -25,13 +28,16 @@ class MyRunner(StreamRunner):
         self.webview = webview
         
     def process_stream_event(self, event: any) -> None:
-        if isinstance(event, XmlStreamEvent):
-            r = event.message
-        else:
-            r = event
-        print(r)
-        # call_js_fn(self.webview,"onLaunching", None,"启动中")
-        call_js_fn(self.webview,"onLaunching", None,r)
+        try:
+            if isinstance(event, XmlStreamEvent):
+                r = event.message
+            else:
+                r = event
+            print(r)
+            # call_js_fn(self.webview,"onLaunching", None,"启动中")
+            call_js_fn(self.webview,"onLaunching", None,r)
+        except Exception as e:
+            print(e)
             
 def launch_mc_2(options,webview):
     context = Context(Path(options["gamePath"]))
