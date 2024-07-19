@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { Bridge, prepareForBridge } from './Bridge.ts'
+import { prepareForBridge } from './Bridge.ts'
 import { App } from './App.tsx';
 
 (async ()=>{

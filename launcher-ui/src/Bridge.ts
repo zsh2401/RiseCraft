@@ -43,14 +43,16 @@ export async function prepareForBridge() {
     window.RiseCraftFn = {}
     await bridge.registerOnWindow("RiseCraft")
     await bridge.registerOnWindow("RiseCraftUpdater")
-    await new Promise<void>((resolve)=>{
-        // eslint-disable-next-line no-constant-condition
-        while(true){
-            sleep(50)
-            if(window.pywebview){
-                resolve()
-                break
+    await new Promise<void>((resolve) => {
+        (async () => {
+            // eslint-disable-next-line no-constant-condition
+            while (true) {
+                await sleep(50)
+                if (window.pywebview) {
+                    resolve()
+                    break
+                }
             }
-        }
+        })()
     })
 }
