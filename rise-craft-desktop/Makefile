@@ -1,13 +1,13 @@
-build-macos: RiseCraft.macos assets 
+build-macos: RiseCraft.macos structure 
 	-mv RiseCraft.macos RiseCraft/RiseCraft
 
-build-windows: RiseCraft.exe assets 
+build-windows: RiseCraft.exe structure 
 	-mv RiseCraft.exe RiseCraft/RiseCraft
 	
 generate:
 	python main.py generate RiseCraft "https://risecraft.oss-rg-china-mainland.aliyuncs.com/RiseCraft/"
 
-assets:
+structure:
 	@-mkdir RiseCraft
 	-cp -rf jre RiseCraft/
 	-cp -rf game RiseCraft/
