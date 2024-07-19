@@ -13,7 +13,13 @@ export function Updater(props: {
                 }else{
                     props.onNoUpdate()
                 }
-            }catch{
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            }catch(err:any){
+                if(err instanceof Error){
+                    alert(err.message)
+                }else{
+                    alert(JSON.stringify(err))
+                }
                 props.onNoUpdate()
             }
           
