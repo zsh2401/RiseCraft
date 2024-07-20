@@ -30,7 +30,7 @@ export function Content() {
                 baseVersionName: "1.20.1",
                 resolutionHeight: 720,
                 resolutionWidth: 1280,
-                gamePath: appData + "/game/.minecraft"
+                gamePath: appData + "/files/.minecraft"
             })
             setFailed(true)
         } catch (err) {
