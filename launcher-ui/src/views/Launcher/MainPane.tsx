@@ -24,10 +24,10 @@ export function Content() {
             }
             await window.RiseCraft.launch({
                 java,
-                versionName: "1.18.2-40.2.21",
+                versionName: "1.20.1-47.3.0",
                 userName,
                 jvmArguments: ["-Xmx4096m"],
-                baseVersionName: "1.18.2",
+                baseVersionName: "1.20.1",
                 resolutionHeight: 720,
                 resolutionWidth: 1280,
                 gamePath: appData + "/game/.minecraft"
@@ -41,7 +41,7 @@ export function Content() {
     }, [appData, java, userName])
 
     const launched = useCallback(async () => {
-        await window.RiseCraft.exitLauncher(0)
+        // await window.RiseCraft.exitLauncher(0)
     }, [])
 
     useEffect(() => {
