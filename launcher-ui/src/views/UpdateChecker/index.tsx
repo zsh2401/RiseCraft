@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react"
-import "./updater.scss"
+import { useEffect } from "react"
+import "./index.scss"
 import { tryRemoveJourneyMap } from "../../addtional-tasks/removeJourneyMap"
-export function Updater(props: {
-    onNoUpdate: () => void
-}) {
+import { useNavigate } from "react-router"
+export function UpdateChecker() {
+    const navigate = useNavigate()
     // const [stage,setStage] = useState<"checking" | "need-upgrade">("checking")
     useEffect(() => {
         (async () => {
@@ -14,7 +14,7 @@ export function Updater(props: {
                 if(should){
                     await window.RiseCraft.performUpgrade()
                 }else{
-                    props.onNoUpdate()
+                    navigate("/launching")
                 }
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             }catch(err:any){
@@ -23,11 +23,10 @@ export function Updater(props: {
                 }else{
                     alert( "无法检查更新:" + JSON.stringify(err))
                 }
-                props.onNoUpdate()
+                navigate("/launching")
             }
-          
         })()
-    }, [props])
+    }, [])
     return <div className="updater">
         正在检查更新
     </div>
