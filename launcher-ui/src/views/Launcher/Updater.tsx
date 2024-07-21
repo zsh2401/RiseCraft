@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import "./updater.scss"
+import { tryRemoveJourneyMap } from "../../addtional-tasks/removeJourneyMap"
 export function Updater(props: {
     onNoUpdate: () => void
 }) {
@@ -8,7 +9,8 @@ export function Updater(props: {
         (async () => {
             try{
                 const should = await window.RiseCraft.isUpgradable()
- 
+                // 1.0.2->1.0.3
+                await tryRemoveJourneyMap()
                 if(should){
                     await window.RiseCraft.performUpgrade()
                 }else{
