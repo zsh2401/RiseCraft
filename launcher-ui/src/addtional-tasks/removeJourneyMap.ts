@@ -5,9 +5,9 @@ export async function tryRemoveJourneyMap() {
     const fileName = "旅行地图journeymap-1.20.1-5.10.1-forge.jar"
     try {
         if (systemName === "Windows") {
-            await native.system(`del /f ${root}\\files\\.minecraft\\${fileName}`)
+            await native.system(`del /f ${root}\\files\\.minecraft\\mods\\${fileName}`)
         } else {
-            await native.system(`rm -f ${root}/files/.minecraft/${fileName}`)
+            await native.system(`rm -f ${root}/files/.minecraft/mods/${fileName}`)
         }
     } catch (err) {
         // Do nothing
