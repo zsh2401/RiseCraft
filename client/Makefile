@@ -1,32 +1,30 @@
-build-macos: RiseCraft.macos structure 
-	-mv RiseCraft.macos RiseCraft/RiseCraft
+.PHONY: structure
+darwin: RiseCraft.run structure 
+	-mv RiseCraft.run RiseCraft/RiseCraft
 
-build-windows: RiseCraft.exe structure 
+win32: RiseCraft.exe structure 
 	-mv RiseCraft.exe RiseCraft/RiseCraft
 	
+zip: darwin win32
+	zip -r RiseCraft.zip RiseCraft
 generate:
 	python main.py generate RiseCraft "https://risecraft.oss-rg-china-mainland.aliyuncs.com/RiseCraft/"
 
 structure:
+	@-rm -rf RiseCraft
 	@-mkdir RiseCraft
-	-cp -rf jre RiseCraft/
-	-cp -rf game RiseCraft/
+	-cp -rf files RiseCraft/
+	cp version.json RiseCraft/
 
-RiseCraft.macos:
-	python -m nuitka --follow-imports main.py
-	mv main.bin RiseCraft.macos
+RiseCraft.run:
+	# python -m nuitka --follow-imports main.py
+	pyinstaller main.py --onefile -w
+	mv dist/main RiseCraft.run
 
 RiseCraft.exe:
-	python -m nuitka main.py --onefile --windows-disable-console --windows-icon-from-ico=assets/icon.ico
-	mv main.exe RiseCraft.exe
-win-debug:
 	pyinstaller main.py --onefile -w --icon=assets/icon.ico
 	mv dist/main.exe RiseCraft.exe
 
-run: RiseCraft
-	./RiseCraft
-dev:
-	python RiseCraft.py
 clean:
 	rm -rf logs
 	rm -rf RiseCraft

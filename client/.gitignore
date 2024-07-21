@@ -3,6 +3,7 @@ build
 dist
 *.spec
 *.pyc
+files
 jre
 game
 logs
@@ -16,3 +17,4 @@ data
 *.dist
 *.zip
 full-version.json
+*.run

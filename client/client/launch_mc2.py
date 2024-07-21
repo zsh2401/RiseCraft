@@ -1,4 +1,5 @@
 
+from typing import List
 from portablemc.standard import Context, Version,QuickPlayMultiplayer,Watcher,StreamRunner, XmlStreamEvent
 from portablemc.forge import ForgeVersion
 # from portablemc.util import QuickPlay
@@ -23,9 +24,15 @@ class MyWatcher(Watcher):
             print(e)
         
 class MyRunner(StreamRunner):
-    def __init__(self,webview) -> None:
+    def __init__(self,webview,pid_callback) -> None:
         super().__init__()
         self.webview = webview
+        self.pid_callback = pid_callback
+        
+    def process_create(self, args: List[str], work_dir: Path):
+        proc =  super().process_create(args, work_dir)
+        self.pid_callback(proc)
+        return proc
         
     def process_stream_event(self, event: any) -> None:
         try:
@@ -39,7 +46,7 @@ class MyRunner(StreamRunner):
         except Exception as e:
             print(e)
             
-def launch_mc_2(options,webview):
+def launch_mc_2(options,webview,proc_callback):
     context = Context(Path(options["gamePath"]))
     version = ForgeVersion(options["versionName"], context=context)
     version.jvm_path = Path(options["java"])
@@ -55,5 +62,6 @@ def launch_mc_2(options,webview):
     env = version.install(watcher=MyWatcher(webview))
     env.jvm_args.extend(options["jvmArguments"])
     print("launching")
-    env.run(MyRunner(webview))
+    # webview.
+    env.run(MyRunner(webview,proc_callback))
     

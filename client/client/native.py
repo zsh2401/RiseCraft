@@ -31,6 +31,7 @@ class RiseCraft:
         self.root_dir = root_dir
         self.api_url = api_url
         self.webview = webview
+        self.proc = None
     
     def save(self,key,value):
         os.makedirs(os.path.join(self.root_dir,"data"),exist_ok=True)
@@ -60,7 +61,7 @@ class RiseCraft:
         machine = platform.machine().lower()
         if system == "windows" and machine.endswith("64"):
             machine = "amd64"
-        bin = f"{self.root_dir}/jre/{system}/{machine}/bin"
+        bin = f"{self.root_dir}/files/jre/{system}/{machine}/bin"
         if platform.system().lower() != "windows":
             os.system(f"chmod +x {bin}/*")
             
@@ -99,5 +100,13 @@ class RiseCraft:
     def exitLauncher(self,code):
         os._exit(code)
         
+    def kill(self):
+        if self.proc is not None:
+            self.proc.kill()
+        else:
+            raise SystemError("Process is not exist")
+        
     def launch(self,options):
-        launch_mc_2(options,self.webview)
+        def on_process_created(proc):
+            self.proc  = proc
+        launch_mc_2(options,self.webview,on_process_created)
