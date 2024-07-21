@@ -1,11 +1,11 @@
 .PHONY: structure clean clean-files index RiseCraft
-darwin: RiseCraft.run structure index
+darwin: clean-files RiseCraft.run structure index
 	-cp RiseCraft.run RiseCraft/RiseCraft
 
-win32: RiseCraft.exe structure index
+win32: clean-files RiseCraft.exe structure index
 	-cp RiseCraft.exe RiseCraft/RiseCraft.exe
 
-RiseCraft: darwin win32 clean-files
+RiseCraft: darwin win32 
 	cp full-version.json RiseCraft/
 	
 zip: RiseCraft
@@ -36,7 +36,7 @@ clean-files:
 	rm -rf files/.minecraft/wd_filehost
 	rm -rf files/.minecraft/saves
 	rm -rf files/.minecraft/journeymap
-	rm -rf files/.minecraft/XaeroWaypoints
+	rm -rf files/.minecraft/XaeroWaypoints*
 
 clean: clean-files
 	rm -rf logs
