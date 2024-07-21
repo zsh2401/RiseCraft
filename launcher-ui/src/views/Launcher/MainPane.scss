@@ -1,0 +1,38 @@
+.content{
+    // background-color:;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    // background-color: red;
+    .centre{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        h1{
+            font-size: 80px;
+            letter-spacing: 10px;
+        }
+        .pad{
+            color:black;
+            .title{
+                text-align: center;
+                margin: 5px;
+                font-size: xx-large;
+                letter-spacing: 4px;
+            }
+            .desc{
+                font-size: smaller;
+                padding: 4px;
+                text-align: center;
+                color: gray;
+            }
+            padding: 20px;
+            width: 250px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+        }
+    }
+  
+}

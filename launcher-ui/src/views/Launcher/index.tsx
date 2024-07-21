@@ -1,7 +1,7 @@
 
 import css from "./index.module.scss"
 
-import { Content } from './MainPane'
+import { MainPane } from './MainPane'
 import { useState } from "react"
 import { Updater } from "./Updater"
 
@@ -19,7 +19,7 @@ export function Launcher() {
       </div>
       <div className={css.contentWrapper}>
         {
-          showContent ?  <Content/> : <Updater onNoUpdate={()=>setShowContent(true)}/>
+          showContent ?  <MainPane/> : <Updater onNoUpdate={()=>setShowContent(true)}/>
         }
        
       </div>
