@@ -18,11 +18,16 @@ export interface RiseCraftUpdaterAPI {
 
 export interface RiseCraftNativeAPI {
     version(): Promise<RiseCraftVersion>
+
     read<T>(key: string): Promise<T | null>
     save<T>(key: string, value: T): Promise<void>
+
     launch(options: RiseCraftLaunchOptions): Promise<void>
+    kill():Promise<void>
+
     getJavaPaths(): Promise<string[]>
     appDataDir(): Promise<string>
+    
     hide(): Promise<void>
     show(): Promise<void>
     getVersions(gamePath: string): Promise<string[]>

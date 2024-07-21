@@ -16,6 +16,9 @@ export function Content() {
         })()
     }, [])
 
+    const kill = useCallback(()=>{
+        window.RiseCraft.kill()
+    },[])
     const launch = useCallback(async () => {
         try {
             setLaunching(true)
@@ -26,6 +29,8 @@ export function Content() {
                 java,
                 versionName: "1.20.1-47.3.0",
                 userName,
+                server:"pi.mc",
+                port:2401,
                 jvmArguments: ["-Xmx4096m"],
                 baseVersionName: "1.20.1",
                 resolutionHeight: 720,
@@ -57,6 +62,7 @@ export function Content() {
         <div className='pad'>
             <Input value={userName} onChange={e => setUserName(e.target.value)} placeholder='用户名' />
             <br /><br />
+            <Button size='large' danger onClick={kill}>关闭</Button>
             <Button loading={launching} size='large' type='primary' onClick={launch}>启动</Button>
         </div>
         {navigator.userAgent}
