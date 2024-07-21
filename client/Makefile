@@ -9,9 +9,10 @@ RiseCraft: darwin win32 clean-files
 	cp full-version.json RiseCraft/
 	
 zip: RiseCraft
+	@-rm -rf RiseCraft.zip
 	zip -r RiseCraft.zip RiseCraft
 
-index:
+index: RiseCraft
 	python main.py generate RiseCraft "https://risecraft.oss-rg-china-mainland.aliyuncs.com/RiseCraft/"
 
 structure:
@@ -34,6 +35,8 @@ clean-files:
 	rm -rf files/.minecraft/crash-reports
 	rm -rf files/.minecraft/wd_filehost
 	rm -rf files/.minecraft/saves
+	rm -rf files/.minecraft/journeymap
+	rm -rf files/.minecraft/XaeroWaypoints
 
 clean: clean-files
 	rm -rf logs
