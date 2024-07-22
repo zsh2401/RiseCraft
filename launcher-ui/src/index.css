@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: zPixel;
-  src: url(./font/zpix.ttf);
+  src: url(https://zpix.vercel.app/zpix.woff2);
 }
 html,body,#root{
   height: 100%;

@@ -1,7 +1,7 @@
 import { AshlynnArea } from "./AshlynnArea";
 import { Status } from "./Stauts";
 import yy from "./yy.ico"
-import {TypeAnimation} from "react-type-animation"
+import { TypeAnimation } from "react-type-animation"
 export function Launcher() {
     return <div style={{
         height: "100vh",
@@ -10,22 +10,20 @@ export function Launcher() {
         justifyContent: "center"
     }}>
         <h1 style={{ textAlign: "center", fontSize: "80px", marginBottom: "48px", letterSpacing: "10px" }}>
-        <TypeAnimation
-        repeat={Infinity}
-        sequence={[
-            "基友群MC十周年纪念!",
-            2000,
-            "Rise Craft 2024",
-            2000,
-            "GFCS 2024",
-            2000,
-            "Minecraft 1.20.1",
-            2000,
-        ]}
-        >
-
-        </TypeAnimation>
-
+            <TypeAnimation
+                repeat={Infinity}
+                sequence={[
+                    "基友群MC十周年纪念!",
+                    2000,
+                    "Rise Craft 2024",
+                    2000,
+                    "GFCS 2024",
+                    2000,
+                    "Minecraft 1.20.1",
+                    2000,
+                ]}
+            >
+            </TypeAnimation>
         </h1>
         <div style={{
             display: "flex", justifyContent: "center"
@@ -68,7 +66,7 @@ export function Launcher() {
             margin: "16px auto 0 auto",
             borderRadius: "16px",
             // background:"red",
-            padding:"16px",
+            padding: "16px",
             background: "rgba(0,0,0, 0.5)",
             color: "whitesmoke"
         }}>
