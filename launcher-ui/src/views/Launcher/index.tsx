@@ -49,11 +49,11 @@ export function Launcher() {
             setLaunchedOnce(true)
             await window.RiseCraft.launch({
                 java,
-                versionName: "1.20.1-47.3.0",
+                versionName: "1.20.1-47.3.5",
                 userName:userName!,
                 // server:"110.42.38.188",
                 // port:25565,
-                jvmArguments: ["-Xmx8192m"],
+                jvmArguments: ["-Xmx4096m"],
                 baseVersionName: "1.20.1",
                 resolutionHeight: 720,
                 resolutionWidth: 1280,
@@ -84,6 +84,10 @@ export function Launcher() {
             <div>
                 {/* <h1>RiseCraft X</h1>
                 <h3>Have fun!</h3> */}
+                <iframe style={{
+                    width:"800px",
+                    height:"300px"
+                }} src="http://110.42.38.188:8123/"/>
             </div>
             <div className='pad'>
                 <h2 className='title'>Rise Craft</h2>
