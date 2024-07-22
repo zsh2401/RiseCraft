@@ -1,10 +1,9 @@
 .status{
-    height: 130px;
+    height: 60px;
     overflow-y: scroll;
-    background-color: whitesmoke;
-    color: black;
     // border-radius: 16px;
     // padding-top: 16px;
-    padding: 10px;
-    margin-top: 32px;
+    // overflow-wrap: anywhere;
+    // overflow-x: hidden;
+    padding: 16px;
 }

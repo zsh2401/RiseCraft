@@ -16,6 +16,7 @@
     "react-dom": "^18.3.1",
     "react-router": "^6.25.1",
     "react-router-dom": "^6.25.1",
+    "react-type-animation": "^3.2.0",
     "sass": "^1.77.8",
     "sz-react-support": "^2.5.2"
   },
