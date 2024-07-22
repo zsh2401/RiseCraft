@@ -16,7 +16,7 @@ def on_closed():
     print("cancel")
     os._exit(0)
     
-def gui(target_dir:str,url:str,api:str):
+def updater_gui(target_dir:str,url:str,api:str):
     window = webview.create_window('RiseCraftUpdater', url,width=800, height=600, resizable=False)
     window.events.closed += on_closed
     thread = threading.Thread(target=do_update,args=[target_dir,api,window])

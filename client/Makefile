@@ -1,4 +1,4 @@
-.PHONY: structure clean clean-files index RiseCraft
+.PHONY: structure clean clean-files index RiseCraft dev 
 darwin: clean-files RiseCraft.run structure index
 	-cp RiseCraft.run RiseCraft/RiseCraft
 
@@ -15,10 +15,15 @@ zip: RiseCraft
 index: RiseCraft
 	python main.py generate RiseCraft "https://risecraft.oss-rg-china-mainland.aliyuncs.com/RiseCraft/"
 
-structure:
+dev:
+	DEBUG=1 python main.py
+
+structure: clean-files
 	@-rm -rf RiseCraft
 	@-mkdir RiseCraft
-	-cp -rf files RiseCraft/
+	# cp -rf files RiseCraft/
+	python ./before-structure.py
+	rsync -aH files RiseCraft/ --exclude "files/.minecraft/**/*.dylib" 
 	cp version.json RiseCraft/
 
 RiseCraft.run:
@@ -35,8 +40,11 @@ clean-files:
 	rm -rf files/.minecraft/crash-reports
 	rm -rf files/.minecraft/wd_filehost
 	rm -rf files/.minecraft/saves
+	rm -rf files/.minecraft/patchouli_books
+	rm -rf files/.minecraft/CustomSkinLoader/caches
 	rm -rf files/.minecraft/journeymap
 	rm -rf files/.minecraft/XaeroWaypoints*
+	rm -rf files/.minecraft/options.txt
 
 clean: clean-files
 	rm -rf logs

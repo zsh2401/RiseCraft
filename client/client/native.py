@@ -1,14 +1,9 @@
 import platform
-import threading
-import uuid
-import minecraft_launcher_lib
 import os
-import subprocess
 import json
 from shared.api import fetch_version_info
 from .execute_script import execute_script
 from .start_update_process import start_update_process
-from .launch_mc import launch_mc
 from .launch_mc2 import launch_mc_2
 from shared.version_engine.local import read_local
 class Bridge:
