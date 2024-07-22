@@ -50,6 +50,7 @@ clean: clean-files
 	rm -rf logs
 	rm -rf RiseCraft
 	rm -rf fake-local
+	rm -rf dist build
 	rm -rf data
 	rm -rf main.dist main.build
 	rm -rf RiseCraft.bin RiseCraft.run RiseCraft.exe
