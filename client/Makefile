@@ -54,4 +54,6 @@ clean: clean-files
 	rm -rf data
 	rm -rf RiseCraft.zip
 	rm -rf main.dist main.build
-	rm -rf RiseCraft.bin RiseCraft.run RiseCraft.exe
+	rm -rf RiseCraft.bin RiseCraft.run 
+	# DO NOT DELETE WIN32 EXE
+	# rm -rf RiseCraft.exe
