@@ -42,6 +42,9 @@ export function MemorySelector(props: {
     }, [])
 
     useEffect(() => {
+        if(!xmxG){
+            return
+        }
         window.RiseCraft.save("xmxg", xmxG)
         setMarkValue(fromGtoMarkValue(xmxG))
     }, [xmxG])

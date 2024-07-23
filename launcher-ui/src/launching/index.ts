@@ -1,4 +1,3 @@
-import { ModRemover } from "./ModRemover";
 import { OneFileRemover } from "./OneFileRemover";
 import { TaskBase } from "./TaskBase";
 
