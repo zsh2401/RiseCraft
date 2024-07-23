@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Launcher } from './views/Launcher'
 import { Upgrading } from './views/Upgrading'
-import { UpdateChecker } from './views/UpdateChecker'
+import { SplashScreen } from './views/SplashScreen'
 import { Background } from './components/Background'
 import { ConfigProvider } from 'antd'
 
@@ -18,20 +18,16 @@ export function App() {
       }
     }}
   >
-
-
-
     <Background>
-
       <BrowserRouter>
         <Routes>
           <Route index path='/' element={
-            <UpdateChecker />
+            <SplashScreen />
           }></Route>
-          <Route index path='/launching' element={
+          <Route path='/launching' element={
             <Launcher />
           }></Route>
-          <Route index path='/upgrading' element={
+          <Route path='/upgrading' element={
             <Upgrading />
           }></Route>
         </Routes>

@@ -1,0 +1,25 @@
+.updater {
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .name {
+            font-size: 80px;
+        }
+        .stage{
+            margin-top: 16px;
+            font-size:medium;
+            color: gray;
+        }
+    }
+}

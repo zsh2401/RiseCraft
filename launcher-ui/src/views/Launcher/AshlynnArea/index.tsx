@@ -1,14 +1,17 @@
 
 import { KeyboardEventHandler, useCallback, useEffect, useState } from 'react'
 import "./index.scss"
-import { Button, Input } from 'antd'
+import { Button, Input, Slider, SliderSingleProps } from 'antd'
 import { Status } from '../Stauts'
 import icon from "./pickaxe.jpg"
 import { isBlankOrNullOrEmpty } from 'sz-react-support'
 import { PlayCircleOutlined } from '@ant-design/icons'
+import { MemorySelector } from './MemorySelector'
 export function AshlynnArea() {
     const [appData, setAppData] = useState<string>()
     const [java, setJava] = useState<string>()
+
+    const [xmxG, setXmxG] = useState(8)
     const [valid, setValid] = useState<boolean>(false)
     const [launchedOnce, setLaunchedOnce] = useState<boolean>(false)
     const [userName, setUserName] = useState<string>()
@@ -53,7 +56,7 @@ export function AshlynnArea() {
                 java,
                 versionName: "1.20.1-47.3.0",
                 userName: userName!,
-                jvmArguments: ["-Xmx4096m"],
+                jvmArguments: [`-Xmx${xmxG}G`],
                 baseVersionName: "1.20.1",
                 resolutionHeight: 720,
                 resolutionWidth: 1280,
@@ -65,7 +68,7 @@ export function AshlynnArea() {
         } finally {
             setLaunching(false)
         }
-    }, [appData, java, userName, valid])
+    }, [appData, java, userName, valid, xmxG])
 
     useEffect(() => {
         (async () => {
@@ -79,24 +82,28 @@ export function AshlynnArea() {
         }
     }, [launch])
 
+
+
     return <div className='ashlynn'>
         <div className='pad'>
             <Input onKeyUp={onKeyUp} autoCapitalize='off' autoComplete='off' size='large' value={userName} onChange={e => setUserName(e.target.value)} placeholder='请输入玩家名' />
             <p className='desc'>仅英文，数字与下划线，至少三位</p>
             {
-                running ? <Button style={{ height: 60, 
-                
+                running ? <Button style={{
+                    height: 60,
+
                 }} block size='large' danger onClick={kill}>关闭游戏</Button> :
-                    <Button 
-                    icon={
-                        <PlayCircleOutlined/>
-                        // <img style={{height:"20px",borderRadius:"5px"}} src={icon}></img>
-                    } 
-                    style={{ height: 60,background:"green" }}
-                     disabled={!valid} loading={running} block size='large' type='primary' onClick={launch}>
+                    <Button
+                        icon={
+                            <PlayCircleOutlined />
+                            // <img style={{height:"20px",borderRadius:"5px"}} src={icon}></img>
+                        }
+                        style={{ height: 60, background: "green" }}
+                        disabled={!valid} loading={running} block size='large' type='primary' onClick={launch}>
                         启动游戏
                     </Button>
             }
+            <MemorySelector onSelect={(G) => setXmxG(G)} />
         </div>
     </div>
 }

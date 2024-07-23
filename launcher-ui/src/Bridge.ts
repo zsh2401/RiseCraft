@@ -40,6 +40,9 @@ export class Bridge {
 
 export const bridge = new Bridge();
 export async function prepareForBridge() {
+    if(window.RiseCraftFn){
+        return
+    }
     window.RiseCraftFn = {}
     await bridge.registerOnWindow("RiseCraft")
     await bridge.registerOnWindow("RiseCraftUpdater")
